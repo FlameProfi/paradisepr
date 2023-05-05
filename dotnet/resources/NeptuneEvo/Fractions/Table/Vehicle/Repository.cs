@@ -36,7 +36,7 @@ namespace NeptuneEvo.Fractions.Table.Vehicle
             foreach (var v in fractionData.Vehicles)
             {
                 var model = v.Value.model;
-                if (fractionData.Id == (int) Models.Fractions.PRISON && (model.Equals("SUBMERSIBLE") || model.Equals("THRUSTER"))) continue;
+                if (fractionData.Id == (int)Models.Fractions.PRISON && (model.Equals("KAMACHO") || model.Equals("NEON"))) continue;
                 var vehicleData =
                     NeptuneEvo.Table.Repository.GetVehicles(memberFractionData.Rank, model, v.Key, v.Value.rank);
                 
