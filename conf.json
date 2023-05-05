@@ -1,0 +1,11 @@
+{
+	"maxplayers": 100,
+	"name": "💎Revolution RP💎 https://discord.gg/gejDFbARdE [ROLEPLAY][BONUS]",
+	"gamemode": "freeroam",
+	"stream-distance": 500.0,
+	"announce": true,
+	"csharp": "enabled",
+	"voice-chat": true,
+	"language": "ru",
+	"port": 22005
+}

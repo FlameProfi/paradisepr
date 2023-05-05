@@ -1,0 +1,12 @@
+fakecars.txt
+install.txt
+mainDB.txt
+package-lock.json
+
+database/serverconfigured.sql
+client_packages/game_resources/dlcpacks/*
+!client_packages/game_resources/dlcpacks/dlcpacks.txt
+.listcache
+
+server_exceptions.txt
+server_logs.txt

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\dotnet",
+    "\\dotnet\\resources",
+    "\\dotnet\\resources\\NeptuneEvo",
+    "\\dotnet\\resources\\NeptuneEvo\\Houses",
+    "\\dotnet\\resources\\NeptuneEvo\\Players",
+    "\\dotnet\\resources\\NeptuneEvo\\Players\\Phone",
+    "\\dotnet\\resources\\NeptuneEvo\\Players\\Phone\\Gps",
+    "\\dotnet\\resources\\NeptuneEvo\\Table",
+    "\\dotnet\\resources\\NeptuneEvo\\Table\\Tasks"
+  ],
+  "SelectedNode": "\\dotnet\\resources\\NeptuneEvo\\Houses\\HouseManager.cs",
+  "PreviewInSolutionExplorer": false
+}

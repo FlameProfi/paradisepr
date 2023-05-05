@@ -1,0 +1,8 @@
+{
+  "OtherList": [],
+  "Name": "ServerDB",
+  "Server": "127.0.0.1",
+  "DataBase": "main",
+  "User": "root",
+  "Password": ""
+}
