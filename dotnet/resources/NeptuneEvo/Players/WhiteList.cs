@@ -9,6 +9,7 @@ namespace NeptuneEvo.Players
     public class WhiteList
     {
         public static List<string> Logins = new List<string>();
+        //public static List<string> Logins = new string[] {"flame", "vitorian", "onzx" }.ToList();
 
         public static bool Check(ExtPlayer player, string login)
         {
@@ -19,7 +20,7 @@ namespace NeptuneEvo.Players
 
             if (Logins.Count > 0 && !Logins.Any(l => l.ToLower() == login))
             {
-                Trigger.ClientEvent(player, "restart", "На сервере проходят технические работы. Вернёмся через несколько минут :)");
+                Trigger.ClientEvent(player, "restart", "На сервере проходят технические работы. Вернёмся через несколько минут :) Подробную информацию можно узнать тут : https://discord.gg/GX8FtP55JB");
                 
                 var sessionData = player.GetSessionData();
                 if (sessionData != null)

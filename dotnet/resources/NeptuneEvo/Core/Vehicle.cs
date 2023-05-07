@@ -505,7 +505,7 @@ namespace NeptuneEvo.Core
                         }
                         if (vehicleLocalData.Fraction == fracId)
                         {
-                            if (memberFractionData.Rank < vehicleLocalData.MinRank && characterData.AdminLVL <= 4 || (fracId == (int)Fractions.Models.Fractions.EMS || fracId == (int)Fractions.Models.Fractions.FIB || fracId == (int)Fractions.Models.Fractions.CITY || fracId == (int)Fractions.Models.Fractions.LSNEWS || fracId == (int)Fractions.Models.Fractions.POLICE || fracId == (int)Fractions.Models.Fractions.SHERIFF || fracId == (int)Fractions.Models.Fractions.ARMY) && !sessionData.WorkData.OnDuty && characterData.AdminLVL <= 4)
+                            if (memberFractionData.Rank < vehicleLocalData.MinRank && characterData.AdminLVL <= 4 || (fracId == (int)Fractions.Models.Fractions.EMS || fracId == (int)Fractions.Models.Fractions.FIB || fracId == (int)Fractions.Models.Fractions.PRISON || fracId == (int)Fractions.Models.Fractions.CITY || fracId == (int)Fractions.Models.Fractions.LSNEWS || fracId == (int)Fractions.Models.Fractions.POLICE || fracId == (int)Fractions.Models.Fractions.SHERIFF || fracId == (int)Fractions.Models.Fractions.ARMY) && !sessionData.WorkData.OnDuty && characterData.AdminLVL <= 4)
                             {
                                 Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.NoAccessToVeh), 3000);
                                 WarpPlayerOutOfVehicle(player);

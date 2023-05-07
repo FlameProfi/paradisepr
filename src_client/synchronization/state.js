@@ -104,6 +104,8 @@ mp.events.addDataHandler("organization", (entity, value, oldValue) => {
 
 global.isDeath = false;
 
+poxuy = false;
+
 mp.events.addDataHandler("InDeath", (entity, value, oldValue) => {
 	try
 	{
@@ -111,8 +113,8 @@ mp.events.addDataHandler("InDeath", (entity, value, oldValue) => {
 			global.isDeath = value;
 		}
 
-		// if (entity !== global.localplayer)
-		// 	gm.createPlayerBlip (entity);
+		 if (entity !== global.localplayer)
+		 	poxuy = false;
 
 		else {
 			const deadAnim = [

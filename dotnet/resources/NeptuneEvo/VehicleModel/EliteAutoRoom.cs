@@ -22,9 +22,9 @@ namespace NeptuneEvo.VehicleModel
         [ServerEvent(Event.ResourceStart)]
         public void Event_ResourceStart()
         {
- 
-            Main.CreateBlip(new Main.BlipData(669, "Elite AutoRoom", NpcBuyPosition, 4, true));
-            PedSystem.Repository.CreateQuest("s_m_m_movprem_01", NpcBuyPosition, NpcBuyRotation, title: "~y~NPC~w~ Продавец элитного транспорта", colShapeEnums: ColShapeEnums.EliteAutoRoom);
+            // TO DO
+            //Main.CreateBlip(new Main.BlipData(669, "Elite AutoRoom", NpcBuyPosition, 4, true));
+            //PedSystem.Repository.CreateQuest("s_m_m_movprem_01", NpcBuyPosition, NpcBuyRotation, title: "~y~NPC~w~ Продавец элитного транспорта", colShapeEnums: ColShapeEnums.EliteAutoRoom);
         }
         [Interaction(ColShapeEnums.EliteAutoRoom)]
         public static void OpenDialog(ExtPlayer player, int index)

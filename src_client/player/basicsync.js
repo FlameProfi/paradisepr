@@ -135,14 +135,14 @@ gm.events.add("playerStreamIn", (entity) => {
 		entity.setAlpha(255);
 });
 
-const deletePlayerBlip = (player) => {
-	if (player) {
-		if (player.blipId) {
-			mp.game.ui.removeBlip(player.blipId);
-			delete player.blipId;
-		}
-	}
-}
+// const deletePlayerBlip = (player) => {
+// 	if (player) {
+// 		if (player.blipId) {
+// 			mp.game.ui.removeBlip(player.blipId);
+// 			delete player.blipId;
+// 		}
+// 	}
+// }
 
 // gm.createPlayerBlip = (player) => {
 // 	if (player && mp.players.exists(player)) {
@@ -175,7 +175,7 @@ const deletePlayerBlip = (player) => {
 //   }
 
 gm.events.add("playerStreamOut", (entity) => {
-	deletePlayerBlip(entity);
+	// deletePlayerBlip(entity);
 });
 
 gm.events.add("vehicleStreamIn", (entity) => {
