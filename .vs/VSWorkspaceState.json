@@ -3,14 +3,14 @@
     "",
     "\\dotnet",
     "\\dotnet\\resources",
+    "\\dotnet\\resources\\Localization",
+    "\\dotnet\\resources\\Localization\\Lang",
     "\\dotnet\\resources\\NeptuneEvo",
+    "\\dotnet\\resources\\NeptuneEvo\\Core",
     "\\dotnet\\resources\\NeptuneEvo\\Organizations",
     "\\dotnet\\resources\\NeptuneEvo\\Organizations\\FamilyZones",
-    "\\dotnet\\resources\\NeptuneEvo\\Players",
-    "\\dotnet\\resources\\NeptuneEvo\\Players\\Phone",
-    "\\dotnet\\resources\\NeptuneEvo\\Players\\Phone\\Gps",
-    "\\dotnet\\resources\\NeptuneEvo\\Table",
-    "\\dotnet\\resources\\NeptuneEvo\\Table\\Tasks"
+    "\\dotnet\\resources\\NeptuneEvo\\VehicleModel"
   ],
+  "SelectedNode": "\\dotnet\\resources\\NeptuneEvo\\VehicleModel\\Main.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -305,7 +305,8 @@ namespace NeptuneEvo.Functions
     
     public static class VipCommands
     {
-        public const string Cam = "cam"; 
+        public const string Cam = "cam";
+        public const string Chat = "v";
         public const string Camtime = "camtime"; //+
     }
 
@@ -557,6 +558,7 @@ namespace NeptuneEvo.Functions
 
         private static string DefaultVipAccess = JsonConvert.SerializeObject(new Dictionary<string, sbyte>()
         {
+            { VipCommands.Chat, 1 },
             { VipCommands.Cam, 5 },
             { VipCommands.Camtime, 5 },
         });

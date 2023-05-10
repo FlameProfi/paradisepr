@@ -83,8 +83,8 @@ namespace Redage.SDK.Models
         
         public int[] DalnoboyMoney = new int[]
         {
-            620,
-            120
+            6200,
+            1200
         };
         
         public int CreateOrgPrice = 250000; // 2.5kk $
@@ -101,7 +101,7 @@ namespace Redage.SDK.Models
         public int AirdropOrderPrice = 100000;
         
         public int ZapravkaMinPrice = 2;
-        public int ZapravkaMaxPrice = 3;
+        public int ZapravkaMaxPrice = 30;
         
         public int ClothesMinPrice = 48;
         public int ClothesMaxPrice = 88;

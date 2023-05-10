@@ -1762,6 +1762,21 @@ namespace NeptuneEvo.Core
             }
         }
 
+
+        // VIP CHAT TO DO
+        [Command(VipCommands.Chat)]
+        public static void CMD_vipchat(ExtPlayer player, string message)
+        {
+            try
+            {
+                Admin.vipChat(player, message);
+            }
+            catch (Exception e)
+            {
+                Log.Write($"CMD_vipchat Exception: {e.ToString()}");
+            }
+        }
+
         private static string[] ModelsAllowedToMedia = new string[30]
         {
             "imporage", "boar", "cat", "chickenhawk", "chimp", "chop", "cormorant", "cow", "coyote", "crow", "deer", "hen", "husky", 

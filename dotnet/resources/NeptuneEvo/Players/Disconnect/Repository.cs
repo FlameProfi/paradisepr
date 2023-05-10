@@ -51,7 +51,8 @@ namespace NeptuneEvo.Players.Disconnect
                 if (Queue.Repository.List.Contains(player)) 
                     Queue.Repository.List.Remove(player);
 
-                if (Main.AllAdminsOnline.Contains(player)) 
+
+                if (Main.AllAdminsOnline.Contains(player))
                     Main.AllAdminsOnline.Remove(player);
 
                 Chars.Repository.OtherClose(player);

@@ -30,6 +30,7 @@ using NeptuneEvo.VehicleData.Data;
 using NeptuneEvo.VehicleData.LocalData;
 using NeptuneEvo.VehicleData.LocalData.Models;
 using Newtonsoft.Json;
+using Org.BouncyCastle.Asn1.X509;
 
 
 namespace NeptuneEvo.Core
@@ -3006,6 +3007,44 @@ namespace NeptuneEvo.Core
             catch (Exception e)
             {
                 Log.Write($"adminChat Exception: {e.ToString()}");
+            }
+        }
+
+        // vip chat to do
+        public static void vipChat(ExtPlayer player, string message)
+        {
+            try
+            {
+                if (!CommandsAccess.CanUseCmd(player, VipCommands.Chat)) return;
+                var sessionData = player.GetSessionData();
+                if (sessionData == null)
+                    return;
+
+                var characterData = player.GetCharacterData();
+                if (characterData == null)
+                    return;
+
+                //var fracId = memberFractionData.Id;
+                var targetAccountData = player.GetAccountData();
+                if (characterData.Unmute > 0)
+                {
+                    Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.YouMutedMins, characterData.Unmute / 60), 3000);
+                    return;
+                }
+                if (characterData.DemorganTime >= 1) return;
+                string msgSender = "!{#79cbdd}" + player.Name.ToString().Replace('_', ' ') + " (" + player.Value + "): " + Commands.RainbowExploit(message);
+                foreach (ExtPlayer foreachPlayer in Character.Repository.GetPlayers())
+                {
+                    if (targetAccountData.VipLvl == 0)
+                        continue;
+
+                    if (targetAccountData.VipLvl > 0)
+                        NAPI.Chat.SendChatMessageToPlayer(foreachPlayer, msgSender);
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Write($"VipChat Exception: {e.ToString()}");
             }
         }
         public static void adminGlobal(ExtPlayer player, string message)

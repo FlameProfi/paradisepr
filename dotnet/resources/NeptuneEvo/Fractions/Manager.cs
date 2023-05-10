@@ -43,14 +43,14 @@ namespace NeptuneEvo.Fractions
         {
             try
             {
-                //Main.CreateBlip(new Main.BlisessionData(487, "Merryweather Security", new Vector3(-144.3048, -593.54, 211.76), 4, true, 1.5f));
+                //Main.CreateBlip(new Main.BlisessionData(768, "Merryweather Security", new Vector3(-144.3048, -593.54, 211.76), 4, true, 1.5f));
                 //Main.CreateBlip(new Main.BlisessionData(661, "The Lost", FractionSpawns[16], 4, true, 1.3f));
-               
-                Main.CreateBlip(new Main.BlipData(459, "News", LsNewsSystem.LSNewsCoords[0], 4, true, 1.3f));
+
+                Main.CreateBlip(new Main.BlipData(590, "News", LsNewsSystem.LSNewsCoords[0], 79, true, 1.3f));
 
                 Main.CreateBlip(new Main.BlipData(621, LangFunc.GetText(LangType.Ru, DataName.Bolnica), Ems.emsCheckpoints[0], 1, true));
                 
-                Main.CreateBlip(new Main.BlipData(60, "FIB", Fbi.GpsPosition, 4, true));
+                Main.CreateBlip(new Main.BlipData(88, "FIB", Fbi.GpsPosition, 40, true));
                 
                // Main.CreateBlip(new Main.BlipData(478, LangFunc.GetText(LangType.Ru, DataName.WarPort), Army.ArmyCheckpoints[2], 52, true));
 
@@ -60,10 +60,10 @@ namespace NeptuneEvo.Fractions
                 Main.CreateBlip(new Main.BlipData(437, "Marabunta Grande", FractionSpawns[4], 3, true));
                 Main.CreateBlip(new Main.BlipData(437, "Blood Street", FractionSpawns[5], 1, true));
                 Main.CreateBlip(new Main.BlipData(60, "Sheriff Department", FractionSpawns[18], 31, true));
-                Main.CreateBlip(new Main.BlipData(679, "La Cosa Nostra", FractionSpawns[10], 4, true));
-                Main.CreateBlip(new Main.BlipData(679, "Russian Mafia", FractionSpawns[11], 4, true));
-                Main.CreateBlip(new Main.BlipData(679, "Yakuza", FractionSpawns[12], 4, true));
-                Main.CreateBlip(new Main.BlipData(679, "Armenian Mafia", FractionSpawns[13], 4, true));
+                Main.CreateBlip(new Main.BlipData(78, "La Cosa Nostra", FractionSpawns[10], 40, true));
+                Main.CreateBlip(new Main.BlipData(78, "Russian Mafia", FractionSpawns[11], 40, true));
+                Main.CreateBlip(new Main.BlipData(78, "Yakuza", FractionSpawns[12], 76, true));
+                Main.CreateBlip(new Main.BlipData(78, "Armenian Mafia", FractionSpawns[13], 45, true));
 
                 CreateGarageData();
 

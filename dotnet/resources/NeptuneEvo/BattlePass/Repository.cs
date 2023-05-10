@@ -28,7 +28,7 @@ namespace NeptuneEvo.BattlePass
         
         private static int MaxCountTasks = 3;
         
-        private static SeasonId SeasonId = SeasonId.Close;
+        private static SeasonId SeasonId = SeasonId.Three;
         
         private static List<BattlePassTask> BattlePassTask = Season4Models.Repository.BattlePassTask;
 

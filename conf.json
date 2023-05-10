@@ -1,7 +1,7 @@
 {
-	"maxplayers": 100,
-	"name": "💎Revolution RP💎 https://discord.gg/gejDFbARdE [ROLEPLAY][BONUS]",
-	"gamemode": "freeroam",
+	"maxplayers": 1000,
+	"name": "💎Revolution RP💎Начни свою историю! 200к$ discord.gg/gejDFbARdE [ROLEPLAY]",
+	"gamemode": "role play",
 	"stream-distance": 500.0,
 	"announce": true,
 	"csharp": "enabled",

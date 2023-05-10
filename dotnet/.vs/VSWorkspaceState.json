@@ -3,9 +3,10 @@
     "",
     "\\resources",
     "\\resources\\NeptuneEvo",
+    "\\resources\\NeptuneEvo\\Fractions",
     "\\resources\\NeptuneEvo\\Players",
     "\\resources\\NeptuneEvo\\Players\\Restart"
   ],
-  "SelectedNode": "\\resources\\NeptuneEvo\\Players\\Restart\\Events.cs",
+  "SelectedNode": "\\resources\\NeptuneEvo\\Fractions\\Manager.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -63,7 +63,7 @@ namespace NeptuneEvo.Fractions
         {
             try
             {
-                Main.CreateBlip(new Main.BlipData(526, "Prison", GunsPosition, 38, true));
+                Main.CreateBlip(new Main.BlipData(768, "Prison", GunsPosition, 38, true));
 
                 CustomColShape.CreateCylinderColShape(ArrestPosition, 6, 3, 0, ColShapeEnums.FractionPolicArrest, 0);
                 //CustomColShape.CreateCylinderColShape(PrisonCheckpoints[1], 1, 2, 0, ColShapeEnums.FractionPrison, 1);
