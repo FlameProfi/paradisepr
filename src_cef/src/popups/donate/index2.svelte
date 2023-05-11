@@ -123,9 +123,6 @@
                 <div class="donatepopup__element">
                     <div class="donatepopup__element_img" style="background-image: url('{document.cloud}img/roulette/items_5.png')"></div>
                 </div>
-                <div class="donatepopup__element">
-                    <div class="donatepopup__element_img" style="background-image: url('{document.cloud}img/roulette/items_0.png')"></div>
-                </div>
             </div>
             <div class="box-between popup__button_box">
                 <div class="popup__button big orange" on:click={onDonate}>{translateText('popups', 'Подтвердить')}</div>

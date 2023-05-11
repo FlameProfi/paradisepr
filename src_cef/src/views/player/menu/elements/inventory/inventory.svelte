@@ -1939,6 +1939,7 @@
     </div>
     <div class="box-between">
         <div class="box-width-457 accessories box-column" style="position: {moveBlock["accessories"][0] == null ? "unset" : "unset"}">
+            <div class="battlepaass__box" on:click={onOpenBattlePass}>Нажмите, чтобы открыть летний пропуск</div>
             <div class="box-accessories" style="top: {moveBlock["accessories"][0]}px;left: {moveBlock["accessories"][1]}px;" on:mousedown={(event) => handleMouseDownBlock(event, "box-accessories", "accessories")} on:mouseup={setAccessories} on:mouseenter={e => mainInventoryArea = true} on:mouseleave={e => mainInventoryArea = false}>
                 <div class={"skin " + (Bool($charGender) || "women")} />
                 <div class="inventory__accessories">

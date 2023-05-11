@@ -33,11 +33,11 @@
     });
 </script>
 
-{#if isLoad} 
+{#if isLoad}
 <div id="newdonate__donatelist">
     <div class="donatelist-elements">
         {#each shopList as item, index}
-         <div class="donatelist-element">
+        <div class="donatelist-element">
             <div class="star-img" style="background-image: url({document.cloud + `donate/personal/${item.id + 1}.png`})" />
             <div class="donatelist-element__info">
                 <div class="donatelist-element__title">{item.name}</div>
@@ -48,8 +48,8 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         {/each}
     </div>
-</div>-
+</div>
 {/if}

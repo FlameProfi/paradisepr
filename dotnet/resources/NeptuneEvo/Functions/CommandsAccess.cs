@@ -316,6 +316,7 @@ namespace NeptuneEvo.Functions
 
         public static string AdminPrefix = "!{#DF5353}Администратор ";
         public static string AdminPrefixChat = "~r~Администратор ";
+        public static string VipPrefix = "!{#00FF00}VIP ";
 
         private static string DefaultAdminAccess = JsonConvert.SerializeObject(new Dictionary<string, sbyte>()
         {

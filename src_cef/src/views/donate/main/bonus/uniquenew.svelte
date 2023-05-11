@@ -24,7 +24,7 @@
 
 </script>
 
-<!--  
+
 <div class="main-menu__header-element">
     <div class="main-menu__star-block">
         <div class="star-img" style="background-image: url({selectListId.img})"/>
@@ -47,4 +47,4 @@
             <div class="newdonate__button-text">{translateText('donate', 'Перейти')}</div>
         </div>
     </div>
-</div>-->
+</div>

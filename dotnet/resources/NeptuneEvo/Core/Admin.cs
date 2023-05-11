@@ -3032,14 +3032,15 @@ namespace NeptuneEvo.Core
                     return;
                 }
                 if (characterData.DemorganTime >= 1) return;
-                string msgSender = "!{#79cbdd}" + player.Name.ToString().Replace('_', ' ') + " (" + player.Value + "): " + Commands.RainbowExploit(message);
+                message = $"{CommandsAccess.VipPrefix}{player.Name.Replace('_', ' ')}: {message}";
+                //string msgSender = "!{#00FF00}" + player.Name.ToString().Replace('_', ' ') + " (" + player.Value + "): " + Commands.RainbowExploit(message);
                 foreach (ExtPlayer foreachPlayer in Character.Repository.GetPlayers())
                 {
                     if (targetAccountData.VipLvl == 0)
                         continue;
 
                     if (targetAccountData.VipLvl > 0)
-                        NAPI.Chat.SendChatMessageToPlayer(foreachPlayer, msgSender);
+                        NAPI.Chat.SendChatMessageToPlayer(foreachPlayer, message);
                 }
             }
             catch (Exception e)

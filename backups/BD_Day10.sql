@@ -1,5 +1,5 @@
 -- MySqlBackup.NET 2.3.4
--- Dump Time: 2023-05-10 23:12:05
+-- Dump Time: 2023-05-10 23:21:56
 -- --------------------------------------
 -- Server version 10.4.28-MariaDB mariadb.org binary distribution
 
@@ -13070,7 +13070,7 @@ CREATE TABLE IF NOT EXISTS `items_data` (
   `location` varchar(24) DEFAULT NULL,
   `slotId` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`auto_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=20142 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=20159 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- 
 -- Dumping data for table items_data
@@ -16477,7 +16477,24 @@ INSERT INTO `items_data`(`auto_id`,`data_id`,`item_id`,`item_count`,`item_data`,
 (20138,'helicrash_1',-9,1,'100','helicrash',19),
 (20139,'helicrash_2',13,170,'','helicrash',11),
 (20140,'warehouse_23',111,1,'','warehouse',59),
-(20141,'warehouse_23',271,1,'174850','warehouse',60);
+(20141,'warehouse_23',271,1,'174850','warehouse',60),
+(20142,'helicrash_1',-1,1,'38_0_True','helicrash',24),
+(20143,'helicrash_3',1,1,'','helicrash',22),
+(20144,'helicrash_2',280,10,'','helicrash',21),
+(20145,'helicrash_2',2,2,'','helicrash',19),
+(20146,'helicrash_1',-1,1,'186_0_True','helicrash',23),
+(20147,'helicrash_1',-1,1,'177_0_True','helicrash',26),
+(20148,'helicrash_3',1,1,'','helicrash',21),
+(20149,'helicrash_3',1,1,'','helicrash',23),
+(20150,'helicrash_3',1,1,'','helicrash',25),
+(20151,'helicrash_3',1,1,'','helicrash',26),
+(20152,'helicrash_1',110,1,'HELI100001','helicrash',22),
+(20153,'helicrash_3',1,1,'','helicrash',20),
+(20154,'helicrash_3',1,1,'','helicrash',19),
+(20155,'helicrash_1',-1,1,'46_0_True','helicrash',25),
+(20156,'helicrash_3',1,1,'','helicrash',24),
+(20157,'helicrash_2',2,1,'','helicrash',20),
+(20158,'helicrash_2',280,10,'','helicrash',22);
 /*!40000 ALTER TABLE `items_data` ENABLE KEYS */;
 
 -- 
@@ -32328,7 +32345,6 @@ INSERT INTO `sessions`(`hash`,`login`,`data`,`oneTime`) VALUES
 ('289ae4e92a6afc7f06de10c2815d0a707a6c026e35bbe48999d65cd7ff93d7ff','narrativee','2023-05-31 17:36:33',1),
 ('35010668695d60cfbef1523ef77a124208847b70eb9b776dba513869627ca090','lyoha','2023-06-09 15:16:56',1),
 ('41e1cdff55b4a81fc495c77e1eda8d7acbf505b00b9ace63f1a0cec2a480ac98','foxis','2023-05-29 19:23:39',0),
-('429c23473e22bff032bfb0755448d86102f1ee3ead2c3dff00dcd58ddc16a8b3','zaikov','2023-05-10 23:11:25',1),
 ('47ff3f19407a6728a0e8e3496749834e7d60953b4316579a935b171e1fb07941','mausssich','2023-06-09 14:24:40',1),
 ('48eaac769a18bb205e7238f0418b99dfd591612025027b9b80f4bdfe3d33e19b','roman78','2023-06-06 15:36:19',1),
 ('4af0d16cbb5abfe5e81ed997ac32de002339858022d0e6e9ebb14d64d370647d','warthunder1','2023-06-08 22:33:22',1),
@@ -32347,7 +32363,7 @@ INSERT INTO `sessions`(`hash`,`login`,`data`,`oneTime`) VALUES
 ('917a65c2a84b01bdf9d5d980407f668508e2af6048fe3881809bebd9a2a51018','speunc7','2023-05-10 23:25:27',1),
 ('945ba7cc14ed63a13989c859b00226c9b0ab5cc6d3349fdf666e7540ffe83f80','bradila','2023-06-05 20:30:34',1),
 ('a5c112749b85440510c59b6de43d8f66f91cdfc820b6090fdad729e08aacbfa1','ganster','2023-05-31 10:18:01',0),
-('ba179847ab14804412d243e3b28465903e98e1d8089b50aacb28d705f035aca3','wvoron','2023-06-09 23:05:16',0),
+('ba179847ab14804412d243e3b28465903e98e1d8089b50aacb28d705f035aca3','wvoron','2023-06-09 23:13:11',0),
 ('bd39e71f1d52696b644f90e861e384599ac0aa9ef29b0ecf81c89f9693ee52b4','1337','2023-05-23 23:45:48',1),
 ('bdf3a7b6884de06a200e4426c4e41c2fd344cd30a56e3b10f267f0b0793ea0bb','shveeed','2023-06-06 15:31:45',1),
 ('be7fb390ca276d66076e1e09f30b074881e8c95aa64542efa877cfa7de2720a7','vitorian','2023-06-02 12:52:12',1),
@@ -32796,5 +32812,5 @@ DELIMITER ;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 
--- Dump completed on 2023-05-10 23:12:10
--- Total time: 0:0:0:5:159 (d:h:m:s:ms)
+-- Dump completed on 2023-05-10 23:22:01
+-- Total time: 0:0:0:5:125 (d:h:m:s:ms)

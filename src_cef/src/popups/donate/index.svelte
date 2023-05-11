@@ -96,10 +96,6 @@
             <div class="donatepopup__element" class:active={selectType === 0} on:click={() => selectType = 0}>
                 <div class="donatepopup__element_img" style="background-image: url('{document.cloud}img/roulette/items_5.png')"></div>
             </div>
-            <div class="donatepopup__element" class:active={selectType === 1} on:click={() => selectType = 1}>
-                <div class="donatepopup__element_label">{translateText('popups', 'Скидка')} {100-Math.round(popupData.data[1] / getPrice (popupData.data[0], 0) * 100)}%</div>
-                <div class="donatepopup__element_img" style="background-image: url('{document.cloud}img/roulette/items_0.png')"></div>
-            </div>
         </div>
         <div class="box-between popup__button_box">
             <div class="popup__button big orange" on:click={onDonate}>{translateText('popups', 'Подтвердить')}</div>
