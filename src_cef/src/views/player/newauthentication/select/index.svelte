@@ -55,12 +55,14 @@
         </div>  
         <div class="popup__select_elements">
             {#each elements as item, index}
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
                 <div class="popup__select_element" class:active={listId === index} on:click={() => onSelected (item[1])}>
                     {item [0]}
                 </div>
             {/each}
         </div>
         <div class="popup__newhud__buttons">
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div class="popup__newhud_button" in:fly={{ y: 50, duration: 350 }} on:click={() => onSelected("null")}>Отмена</div>
         </div>
     </div>

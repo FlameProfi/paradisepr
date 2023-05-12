@@ -1,4 +1,4 @@
-﻿
+﻿/*
 using GTANetworkAPI;
 using Localization;
 using NeptuneEvo.Handles;
@@ -63,3 +63,4 @@ namespace NeptuneEvo.Events
         }
     }
 }
+*/

@@ -74,7 +74,7 @@
 <svelte:window on:keyup={onKeyUp} />
 <div class="popups-auth">
     <div class="box-auth" on:mouseenter={() => MouseUse (false)} on:mouseleave={() => MouseUse (true)}>
-        <div class="title">{translateText('player2', 'Перенос персонажей с Revolution White и Red')}</div>
+        <div class="title">{translateText('player2', 'Перенос персонажей с Elcips White и Red')}</div>
         {#if progressValue < 1}
         <div class="animated fadeIn" style="width: 100%;">
             <div class="box-flex">

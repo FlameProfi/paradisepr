@@ -27,7 +27,6 @@
             executeClient ("client:OnSignInv2", loginInput, passwordInput);
     }
 
-
     let language = "?";
 
     const onKeyUp = (event) => {
@@ -37,31 +36,22 @@
             onLogin ();
     }
 </script>
-<svelte:window on:keyup={onKeyUp} />
+
 <div class="main">
     <div class="main__box">
         <div class="main__forms">
             <InputCustom updateLang={(lang) => language = lang} setValue={(value) => loginInput = value} value={loginInput} isFocus={loginIsFocus} placeholder={translateText('player2', 'Логин или почта')} type="text" icon="auth-user"/>
             <InputCustom updateLang={(lang) => language = lang} setValue={(value) => passwordInput = value} value={passwordInput} isFocus={passwordIsFocus} placeholder={translateText('player2', 'Пароль')} type="password" icon="auth-lock"/>
             <div class="box-flex">
-                <div class="main__button main_button_size_large" on:click={onLogin}>
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <div class="main__button main_button_size_large main__button_restore" on:click={onLogin}>
                     <div class="main__button_left box-center">{translateText('player2', 'Войти')}</div>
-                    <div class="main__button_right box-center">
-                        <div class="main__button_square box-center">
-                            <span class="auth-arrow"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__button main_button_size_small box-center">
-                    <div class="main__button_bottom box-center">
-                        <div class="main__button_rectangle box-center">{language}</div>
-                    </div>
                 </div>
             </div>
-            <div class="main__button main_button_size_large main__button_restore" on:click={onLogin}>
-                <div class="main__button_left box-center none" on:click={() => OnSelectViews("Restore")}>{translateText('player2', 'Восстановление')}</div>
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <div on:click={onLogin}>
+                <div on:click={() => OnSelectViews("Restore")}>{translateText('player2', 'Восстановление')}</div>
             </div>
         </div>
-        <div class="main__scroll"/>
     </div>
 </div>

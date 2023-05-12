@@ -409,7 +409,7 @@ require('./world/sync.js');
 require('./world/metro.js');
 //require('./world/golf.js');
 require('./world/stream.js');
-require('./world/metro/index.js');
+//require('./world/metro/index.js');
 require('./world/petSystem.js');
 require('./world/livingcity.js');
 

@@ -70,19 +70,15 @@
         <div class="main__forms">
             <InputCustom setValue={(value) => restoreInput = value} value={restoreInput} placeholder={placeholder} type="text" icon="auth-user"/>
             <div class="box-flex">
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
                 <div class="main__button main_button_size_large" style="width:100%;" on:click={onSubmitRestore}>
                     <div class="main__button_left box-center">Восстановить</div>
-                    <div class="main__button_right box-center">
-                        <div class="main__button_square box-center">
-                            <span class="auth-arrow"/>
-                        </div>
-                    </div>
                 </div>
             </div>
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div class="main__button main_button_size_large" style="width:100%; margin-top: 30px" on:click={() => OnSelectViews("Authentication")}>
                 <div class="main__button_left box-center none">Назад</div>
             </div>
         </div>
-        <div class="main__scroll"/>
     </div>
 </div>
