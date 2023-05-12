@@ -20,6 +20,12 @@ namespace NeptuneEvo.Chars
         {
             try
             {
+
+                //Парковка
+                Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-1654.0586, -242.61865, 54.936203), 32, true));
+                Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-1220.154, -654.87854, 25.901287), 32, true));
+                Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-163.9448, -2144.0898, 16.83973), 32, true));
+                //
                 Main.CreateBlip(new Main.BlipData(478, "Хранилище 'GoPostal'", new Vector3(435.34058, -647.43616, 28.27), 32, true));
                 Main.CreateBlip(new Main.BlipData(525, "Центр занятости", new Vector3(436.5074, -627.4617, 28.707539), 0, true));
                 //NAPI.Marker.CreateMarker(1, new Vector3(-545.02136, -204.28348, 38.2) - new Vector3(0, 0, 1.5), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220));

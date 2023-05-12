@@ -101,12 +101,14 @@
 {#if !isBan && DeleteData === "-"}
 <div class="auth__center">
     <div class="auth__spawn_elements" on:mouseenter={() => MouseUse (false)} on:mouseleave={() => MouseUse (true)}>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="auth__spawn_element" on:click={() => onSelectSpawnId (spawnData.pos)} class:use={true} class:active={selectSpawnId == spawnData.pos}>
             <div>Место выхода</div>
             <div class="auth__small_text">Вы ничего не потеряете.</div>
             <span class="auth-exit-place"></span>
         </div>
         {#if houseId !== "-"}
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="auth__spawn_element" on:click={() => onSelectSpawnId (spawnData.house)} class:use={true} class:active={selectSpawnId == spawnData.house}>
             {#if !spawnConfirm}
             <div class="box-column">
@@ -128,6 +130,7 @@
         </div>
         {/if}
         {#if FractionID > 0 || OrganizationID > 0}
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="auth__spawn_element" on:click={() => onSelectSpawnId (spawnData.org)} class:use={true} class:active={selectSpawnId == spawnData.org}>
             <div class="box-column">
                 <div>Во фракции</div>
@@ -141,6 +144,7 @@
         <div class="main__button_square box-center">
             <b>&#8592;</b>
         </div>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="main__button main_button_size_large" style="margin-right: 0" on:click={onSpawn}>
             <div class="main__button_left box-center">Войти</div>
             <div class="main__button_right box-center">

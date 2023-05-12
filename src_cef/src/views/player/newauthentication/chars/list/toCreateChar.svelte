@@ -31,7 +31,7 @@
     }
     
 </script>
-
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="auth__characters_block" class:active={$selectIndex === charid} on:click={onSelectChar}>
     <div class="auth__characters_character">
         <div class="box-column">
@@ -61,7 +61,5 @@
         </div>
         <InputCustom cl="auth__characters_input" setValue={(value) => FirstNameLocal = value} value={FirstNameLocal} placeholder="Имя" type="text" />
         <InputCustom cl="auth__characters_input" setValue={(value) => LastNameLocal = value} value={LastNameLocal} placeholder="Фамилия" type="text" />
-        <!--<input class="auth__characters_input" placeholder="Имя" bind:value={FirstNameLocal}>
-        <input class="auth__characters_input" placeholder="Фамилия" bind:value={LastNameLocal}>-->
     </div>
 </div>

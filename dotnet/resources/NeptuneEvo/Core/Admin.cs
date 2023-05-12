@@ -3009,37 +3009,33 @@ namespace NeptuneEvo.Core
                 Log.Write($"adminChat Exception: {e.ToString()}");
             }
         }
-
-        // vip chat to do
         public static void vipChat(ExtPlayer player, string message)
         {
             try
             {
                 if (!CommandsAccess.CanUseCmd(player, VipCommands.Chat)) return;
-                var sessionData = player.GetSessionData();
-                if (sessionData == null)
-                    return;
 
                 var characterData = player.GetCharacterData();
                 if (characterData == null)
                     return;
 
                 //var fracId = memberFractionData.Id;
-                var targetAccountData = player.GetAccountData();
                 if (characterData.Unmute > 0)
                 {
                     Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.YouMutedMins, characterData.Unmute / 60), 3000);
                     return;
                 }
                 if (characterData.DemorganTime >= 1) return;
-                string msgSender = "!{#79cbdd}" + player.Name.ToString().Replace('_', ' ') + " (" + player.Value + "): " + Commands.RainbowExploit(message);
+                message = $"{CommandsAccess.VipPrefix}{player.Name.Replace('_', ' ')}: {message}";
+                //string msgSender = "!{#00FF00}" + player.Name.ToString().Replace('_', ' ') + " (" + player.Value + "): " + Commands.RainbowExploit(message);
                 foreach (ExtPlayer foreachPlayer in Character.Repository.GetPlayers())
                 {
-                    if (targetAccountData.VipLvl == 0)
-                        continue;
+                    var foreachPlayerrData = player.GetAccountData();
 
-                    if (targetAccountData.VipLvl > 0)
-                        NAPI.Chat.SendChatMessageToPlayer(foreachPlayer, msgSender);
+                    if (foreachPlayerrData.VipLvl <= 0) continue;
+                    if (foreachPlayerrData.VipLvl >= 1)
+                        //NAPI.Chat.SendChatMessageToPlayer(foreachPlayer, message);
+                        Trigger.SendChatMessage(foreachPlayer, message);
                 }
             }
             catch (Exception e)

@@ -21,6 +21,7 @@
         <div class="popup__newhud_text">{translateText('player2', 'Вы уверены, что хотите зарандомить внешность?')}</div>
         <div class="popup__newhud__buttons">
             <div class="popup__newhud_button" in:fly={{ y: 50, duration: 350 }} on:click={() => onClickRandom()}>{translateText('player2', 'Подтвердить')}</div>
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div class="popup__newhud_button" in:fly={{ y: 50, duration: 750 }} on:click={() => onPopupToogle()}>{translateText('player2', 'Отмена')}</div>
         </div>
     </div>

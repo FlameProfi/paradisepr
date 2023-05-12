@@ -42,8 +42,10 @@
     width: 100%
     height: 100%
     color: rgba(243,243,243,1.0)
-    //background-image: url('images/background.png')
-    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0) 0%, rgba(1, 22, 39, 0.85) 100%)
+    backdrop-filter: blur(20px)
+    background-image: url(./images/background.png)
+    background-position: center
+    background-size: cover
     @include fluid("font-size", 18)
     .newauthentication__popup
         width: 100%
@@ -114,11 +116,20 @@
                 background-position: center
                 background-repeat: no-repeat
         .header__logo
-            @include fluid("width", 290)
-            @include fluid("height", 50)
+            @include fluid("width", 250)
+            @include fluid("height", 26)
             background-image: url('images/logo.png')
             background-size: contain
             background-position: center
+            background-repeat: no-repeat
+        .header__new
+            position: relative
+            @include fluid("width", 350)
+            @include fluid("height", 726)
+            top: 22vw
+            left: -38.5vw
+            background-image: url('images/news.png')
+            background-size: contain
             background-repeat: no-repeat
         .header-key
             @include fluid("width", 40)
@@ -149,8 +160,8 @@
             color: rgba(255,255,255,0.6)
             cursor: pointer
             &.active
-                border-bottom: 2px solid #0000FF
-                color: #ede5e6
+                border-bottom: 2px solid #E71D36
+                color: rgba(255,255,255,1.0)
     
     .main
         width: 100%
@@ -160,6 +171,7 @@
         display: flex
         justify-content: flex-end
         position: relative
+        top: 15%
         color: #CCCCCC
         .main__box
             @include fluid("width", 376)
@@ -219,6 +231,8 @@
 
         .main__button_right
             height: 100%
+            @include fluid("border-radius", 5)
+            background: radial-gradient(47.84% 50% at 49.88% 50%, #04edd7 10%, #04a999 100%)
             @include fluid("width", 90)
         .main__button_square
             @include fluid("width", 34)
@@ -230,7 +244,9 @@
             height: 100%
             width: 100%
             box-sizing: border-box
-            @include fluid("border-right", 2, "solid #7E7E7E")
+            @include fluid("border-radius", 5)
+            //background: radial-gradient(47.84% 50% at 49.88% 50%, #2FD75E 0%, #1FFC78 100%)
+            background: radial-gradient(47.84% 50% at 49.88% 50%, #04edd7 10%, #04a999 100%)
             font-weight: 600
             @include fluid("font-size", 22)
             &.none
@@ -295,7 +311,7 @@
                     transition: all 1s
                 
             .news-box__header-img
-                background-image: url('./images/background.png')
+                background-image: url('images/background.png')
                 background-size: cover
                 background-position: center
                 background-repeat: no-repeat

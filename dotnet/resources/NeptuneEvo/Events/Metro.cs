@@ -1,5 +1,5 @@
 ﻿/*
- using GTANetworkAPI;
+using GTANetworkAPI;
 using Localization;
 using NeptuneEvo.Handles;
 using NeptuneEvo.Character;
@@ -27,7 +27,7 @@ namespace NeptuneEvo.Events
             ("Pillbox South", new Vector3(-217.11, -1038.77, 30.14)),
             ("Davis", new Vector3(110.09, -1718.53, 30.11)),
         };
-        private int PriceTicket = 50;
+        private int PriceTicket = 500;
         [ServerEvent(Event.ResourceStart)]
         public void OnResourceStart()
         {

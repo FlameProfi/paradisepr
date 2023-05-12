@@ -129,14 +129,14 @@ namespace NeptuneEvo.Fractions
             { (int) Models.Fractions.ARMENIAN, new Vector3(-0.3686997, -0.2600957, 286.0435) },
         };
 
-        //public static Dictionary<int, Vector3> BikerStartDelivery = new Dictionary<int, Vector3>()
-        //{
-        //    { (int) Models.Fractions.THELOST, new Vector3(980.2203, -118.9507, 74.07727) },
-        //};
-        //private static Dictionary<int, Vector3> BikerStartDeliveryRot = new Dictionary<int, Vector3>()
-        //{
-        //    { (int) Models.Fractions.THELOST, new Vector3(-1.311226, -2.088267, 148.5165) },
-        //};
+        public static Dictionary<int, Vector3> BikerStartDelivery = new Dictionary<int, Vector3>()
+        {
+            { (int) Models.Fractions.THELOST, new Vector3(980.2203, -118.9507, 74.07727) },
+        };
+        private static Dictionary<int, Vector3> BikerStartDeliveryRot = new Dictionary<int, Vector3>()
+        {
+            { (int) Models.Fractions.THELOST, new Vector3(-1.311226, -2.088267, 148.5165) },
+        };
 
         public static Vector3[] GangEndDelivery = new Vector3[10]
         {

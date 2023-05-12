@@ -52,9 +52,9 @@
             <div class="main-menu__main-element-img star-img" style="background-image: url({ImgCases})" />
             <div class="main-menu__main-element-text">{translateText('donate', 'Кейсы')}</div>
         </div>
-       <!-- <div class="main-menu__main-element" on:click={() => SetView("Premium")}>
+        <div class="main-menu__main-element" on:click={() => SetView("Premium")}>
             <div class="main-menu__main-element-img star-img" style="background-image: url({ImgPremium})" />
             <div class="main-menu__main-element-text">{translateText('donate', 'Подписки и премиум')}</div>
-        </div>-->
+        </div>
     </div>
 </div>

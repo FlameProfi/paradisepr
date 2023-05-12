@@ -55,20 +55,6 @@
             SelectViews = PagesSorted [index];
         }
     }
-    
-    const onKeyUp = (event) => {
-        if (!isMerger) 
-            return;
-        if ($isInput)
-            return;
-        const { keyCode } = event;
-        
-        if(keyCode == 81) {
-            onClickQ ();
-        } else if(keyCode == 69) { 
-            onClickE ();
-        }
-    }
 
     const MouseUse = (toggled) => {
         executeClient ("client.camera.toggled", toggled);
@@ -83,30 +69,10 @@
             PagesSorted = ["News", "Chars"];
     });
 </script>
-<svelte:window on:keyup={onKeyUp} />
 
-<div id="newauthentication">
+<div id="newauthentication" style="background: none">
     <div class="header box-center">
         <div class="header__logo"/>
-        <div class="box-flex" on:mouseenter={() => MouseUse (false)} on:mouseleave={() => MouseUse (true)}>
-            <div class="header-key box-center" on:click={onClickQ}>
-                Q
-            </div>
-            <div class="header__element" class:active={SelectViews === "News"} on:click={() => OnSelectViews("News")}>
-                {translateText('player2', 'Новости')}
-            </div>
-            <div class="header__element" class:active={SelectViews === "Chars"} on:click={() => OnSelectViews("Chars")}>
-                {translateText('player2', 'Авторизация')}
-            </div>
-            {#if isMergerToggled}
-            <div class="header__element" class:active={SelectViews === "Merger"} on:click={() => OnSelectViews("Merger")}>
-                {translateText('player2', 'Перенести персонажей с White/Red')}
-            </div>
-            {/if}
-            <div class="header-key box-center" on:click={onClickE}>
-                E
-            </div>
-        </div>
         <div class="header__money">
             {format("money", $accountRedbucks)} <span class="header__money_redbucks"></span>
         </div>

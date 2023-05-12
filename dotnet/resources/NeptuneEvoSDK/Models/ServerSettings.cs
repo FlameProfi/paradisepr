@@ -80,7 +80,7 @@ namespace Redage.SDK.Models
         public bool IsJobTinder = true;
         public bool IsCheckOnlineLogin = true;
         public bool IsCheckCmdGov = false;
-        public bool IsDeleteProp = true;
+        public bool IsDeleteProp = false;
         public bool IsCreateProp = true;
         public bool IsHeliCrash = true;
         //

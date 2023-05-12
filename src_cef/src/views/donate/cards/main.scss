@@ -296,7 +296,7 @@
             z-index: 1;
             & b {
                 font-weight: bold;
-                color: #0000FF;
+                color: #FF5B5B;
                 @include fluid("font-size", 12)
             }
             & span {
@@ -327,7 +327,7 @@
             @include fluid("font-size", 24)
             z-index: 2;
             &:hover {
-                background: #0000FF;
+                background: #e24360;
             }
         }
 

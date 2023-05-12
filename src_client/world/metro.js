@@ -267,7 +267,7 @@ const StartMetro = async (stationData) => {
             return;
         }
         global.isSartMetro = true;
-        //mp.api.setDiscordStatus(translateText("Едет на метро"));
+        mp.api.setDiscordStatus(translateText("Едет на метро"));
         mp.events.call("setTraffic", 3);
         DestroyMetro ();
         Natives.DELETE_ALL_TRAINS ();

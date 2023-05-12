@@ -1763,8 +1763,7 @@ namespace NeptuneEvo.Core
         }
 
 
-        // VIP CHAT TO DO
-        [Command(VipCommands.Chat)]
+        [Command(VipCommands.Chat, GreedyArg = true)]
         public static void CMD_vipchat(ExtPlayer player, string message)
         {
             try
