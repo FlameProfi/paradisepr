@@ -500,28 +500,28 @@
     "Id": 70,
     "Name": "Фейерверк обычный",
     "Icon": "inv-item-Firework1",
-    "Price": "300$",
+    "Price": "3000$",
     "ItemId": 0
   },
   "71": {
     "Id": 71,
     "Name": "Фейерверк звезда",
     "Icon": "inv-item-Firework2",
-    "Price": "600$",
+    "Price": "6000$",
     "ItemId": 0
   },
   "72": {
     "Id": 72,
     "Name": "Фейерверк взрывной",
     "Icon": "inv-item-Firework3",
-    "Price": "1500$",
+    "Price": "15000$",
     "ItemId": 0
   },
   "73": {
     "Id": 73,
     "Name": "Фейерверк фонтан",
     "Icon": "inv-item-Firework4",
-    "Price": "2500$",
+    "Price": "25000$",
     "ItemId": 0
   },
   "74": {

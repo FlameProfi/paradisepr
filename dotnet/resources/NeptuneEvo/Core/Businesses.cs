@@ -144,9 +144,9 @@ namespace NeptuneEvo.Core
                     if (!BusProductsData.ContainsKey(prod.Name)) continue;
                     if (data.Type == 0 && prod.Name == "Лотерейный билет")
                     {
-                        if (prod.Price != 500)
+                        if (prod.Price != 100000)
                         {
-                            prod.Price = 500; // Цена за штуку лотерейного билета.
+                            prod.Price = 100000; // Цена за штуку лотерейного билета.
                             changed = true;
                         }
                     }
@@ -180,7 +180,7 @@ namespace NeptuneEvo.Core
                             if (product == null)
                             {
                                 if (busProductData.Value.Type != BusProductToType.Market) continue;
-                                if (busProductData.Key == "Лотерейный билет") data.Products.Add(new Product(500, 0, 0, busProductData.Key, false));
+                                if (busProductData.Key == "Лотерейный билет") data.Products.Add(new Product(100000, 0, 0, busProductData.Key, false));
                                 else data.Products.Add(new Product(busProductData.Value.Price, 0, 1, busProductData.Key, false));
                                 changed = true;
                             }
@@ -860,7 +860,7 @@ namespace NeptuneEvo.Core
                         {
                             if (busProductData.Value.Type != BusProductToType.Market) continue;
                             Product product;
-                            if (busProductData.Key == "Лотерейный билет") product = new Product(500, 0, 0, busProductData.Key, false);
+                            if (busProductData.Key == "Лотерейный билет") product = new Product(100000, 0, 0, busProductData.Key, false);
                             else product = new Product(busProductData.Value.Price, 0, 1, busProductData.Key, false);
                             _ProductsList.Add(product);
                         }
@@ -3421,7 +3421,7 @@ namespace NeptuneEvo.Core
                             return;
                         }
                         Lottery.LotteryBought.Add(mynumb, characterData.UUID);
-                        Lottery.Price = 350 * mynumb;
+                        Lottery.Price = 3500000 * mynumb;
                         switch (mynumb)
                         {
                             case 51:
@@ -3441,8 +3441,8 @@ namespace NeptuneEvo.Core
                                 break;
                         }
 
-                        biz.BuyItemBusiness(characterData.UUID, "Лотерейный билет", 500);
-                        Wallet.Change(player, -500);
+                        biz.BuyItemBusiness(characterData.UUID, "Лотерейный билет", 100000);
+                        Wallet.Change(player, -100000);
                         GameLog.Money($"player({characterData.UUID})", $"biz({biz.ID})", prod.Price, $"buyLottery({Lottery.ID} | {mynumb})");
                         BattlePass.Repository.UpdateReward(player, 6);
                         

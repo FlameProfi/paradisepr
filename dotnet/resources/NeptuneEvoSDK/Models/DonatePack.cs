@@ -9,41 +9,41 @@ namespace Redage.SDK.Models
         /// </summary>
         public int[] PriceRB = new int[] 
         {
-            499,
-            999,
+            199,
+            299,
             14999,
-            4999,
+            499,
             7999,
             8999,
-            9999,
+            599,
             17999,
-            19999,
+            699,
             29999,
-            49999
+            799
         };
         /// <summary>
         /// Цены донат пакетов
         /// </summary>
         public int[] GiveMoney = new int[]
         {
-            12500,
-            25000,
+            1250000,
+            2500000,
             60000,
-            120000,
+            5000000,
             80000,
             200000,
-            275000,
+            7500000,
             125000,
+            10000000,
             450000,
-            450000,
-            500000
+            12000000
         };
 
         public List<string>[] List =
         {
             new List<string>()
             {
-                "12.500$",
+                "1.250.000$",
                 "Стандартный кейс", 
                 "VIP Diamond на 5 дней", 
                 "10 exp (опыта)", 
@@ -55,7 +55,7 @@ namespace Redage.SDK.Models
             },
             new List<string>()
             {
-                "25.000$",
+                "2.500.000$",
                 "Странный Кейс",
                 "VIP Diamond на 10 дней",
                 "10 exp (опыта)",
@@ -67,7 +67,7 @@ namespace Redage.SDK.Models
             },
             new List<string>()
             {
-                "60.000$",
+                "5.000.000$",
                 "Особенный Кейс",
                 "VIP Diamond на 15 дней",
                 "15 exp (опыта)",
@@ -79,7 +79,7 @@ namespace Redage.SDK.Models
             },
             new List<string>()
             {
-                "120000$",
+                "7.500.000$",
                 "Редкий кейс",
                 "30 дней Diamond VIP",
                 "20 exp (опыта)",

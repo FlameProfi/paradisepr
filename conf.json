@@ -3,7 +3,7 @@
 	"name": "💎Revolution RP💎Начни свою историю! 200к$ discord.gg/gejDFbARdE [ROLEPLAY]",
 	"gamemode": "role play",
 	"stream-distance": 500.0,
-	"announce": true,
+	"announce": false,
 	"csharp": "enabled",
 	"voice-chat": true,
 	"language": "ru",

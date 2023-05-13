@@ -36,7 +36,7 @@ namespace NeptuneEvo.BattlePass
         
         private static List<BattlePassReward> BattlePassAwardsPremium = Season4Models.Repository.BattlePassAwardsPremium;
         
-        public static readonly int PricePremium = 19999;
+        public static readonly int PricePremium = 2500;
 
         public static async void Init()
         {

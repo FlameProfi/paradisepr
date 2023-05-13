@@ -46,7 +46,7 @@ namespace NeptuneEvo.Fractions
                 //Main.CreateBlip(new Main.BlisessionData(768, "Merryweather Security", new Vector3(-144.3048, -593.54, 211.76), 4, true, 1.5f));
                 Main.CreateBlip(new Main.BlipData(661, "The Lost", FractionSpawns[16], 4, true, 1.3f));
 
-                Main.CreateBlip(new Main.BlipData(590, "News", LsNewsSystem.LSNewsCoords[0], 79, true, 1.3f));
+                Main.CreateBlip(new Main.BlipData(590, "News", LsNewsSystem.LSNewsCoords[0], 4, true, 1.3f));
 
                 Main.CreateBlip(new Main.BlipData(621, LangFunc.GetText(LangType.Ru, DataName.Bolnica), Ems.emsCheckpoints[0], 1, true));
                 

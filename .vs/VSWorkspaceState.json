@@ -3,14 +3,14 @@
     "",
     "\\dotnet",
     "\\dotnet\\resources",
+    "\\dotnet\\resources\\Localization",
     "\\dotnet\\resources\\NeptuneEvo",
-    "\\dotnet\\resources\\NeptuneEvoSDK",
-    "\\dotnet\\resources\\NeptuneEvoSDK\\Models",
     "\\dotnet\\resources\\NeptuneEvo\\Core",
+    "\\dotnet\\resources\\NeptuneEvo\\Fractions",
     "\\dotnet\\resources\\NeptuneEvo\\Organizations",
     "\\dotnet\\resources\\NeptuneEvo\\Organizations\\FamilyZones",
     "\\dotnet\\resources\\NeptuneEvo\\VehicleModel"
   ],
-  "SelectedNode": "\\dotnet\\resources\\NeptuneEvoSDK\\Models\\ServerSettings.cs",
+  "SelectedNode": "\\dotnet\\resources\\NeptuneEvo\\Core\\Businesses.cs",
   "PreviewInSolutionExplorer": false
 }
