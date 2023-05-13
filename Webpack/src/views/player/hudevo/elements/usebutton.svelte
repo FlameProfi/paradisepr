@@ -36,7 +36,7 @@
 	const CreateProgressBar = () => {
         if (state.keyType === keyType[0] || state.keyType === keyType[1]) {
             ProgressBarId = new ProgressBar.Square("#ProgressBarKey", {
-                color: '#F82847',
+                color: '#8bfbfb',
                 strokeWidth: 8,
                 trailWidth: 8,
                 easing: 'easeInOut',
@@ -45,8 +45,8 @@
                 text: {
                     autoStyleContainer: false
                 },
-                from: { color: '#F82847', width: 8 },
-                to: { color: '#F82847', width: 8 },
+                from: { color: '#8bfbfb', width: 8 },
+                to: { color: '#8bfbfb', width: 8 },
                 // Set default step function for all animate calls
                 step: function(state, circle) {
                     circle.path.setAttribute('stroke-width', state.width);
