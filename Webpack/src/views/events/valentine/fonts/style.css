@@ -1,15 +1,10 @@
 @font-face {
   font-family: 'animationsicon';
-  /* src:  url('animationsicon.eot?jrn3mo');
+  src:  url('animationsicon.eot?jrn3mo');
   src:  url('animationsicon.eot?jrn3mo#iefix') format('embedded-opentype'),
     url('animationsicon.ttf?jrn3mo') format('truetype'),
     url('animationsicon.woff?jrn3mo') format('woff'),
-    url('animationsicon.svg?jrn3mo#animationsicon') format('svg'); */
-  src: url('animationsicon.eot');
-  src: url('animationsicon.eot#iefix') format('embedded-opentype'),
-    url('animationsicon.ttf') format('truetype'),
-    url('animationsicon.woff') format('woff'),
-    url('animationsicon.svg#animationsicon') format('svg');
+    url('animationsicon.svg?jrn3mo#animationsicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -17,21 +12,16 @@
 
 @font-face {
   font-family: 'Nickainley';
-  /* src: url('./nickainley/Nickainley-Normal.eot?jrn3mo');
-  src: url('./nickainley/Nickainley-Normal.eot?jrn3mo#iefix') format('embedded-opentype'),
-    url('./nickainley/Nickainley-Normal.ttf?jrn3mo') format('truetype'),
-    url('./nickainley/Nickainley-Normal.woff?jrn3mo') format('woff'); */
-  src: url('./Nickainley/Nickainley-Normal.eot');
-  src: url('./Nickainley/Nickainley-Normal.eot#iefix') format('embedded-opentype'),
-    url('./Nickainley/Nickainley-Normal.ttf') format('truetype'),
-    url('./Nickainley/Nickainley-Normal.woff') format('woff');
+  src:  url('./nickainley/Nickainley-normal.eot?jrn3mo');
+  src:  url('./nickainley/Nickainley-normal.eot?jrn3mo#iefix') format('embedded-opentype'),
+    url('./nickainley/Nickainley-normal.ttf?jrn3mo') format('truetype'),
+    url('./nickainley/Nickainley-normal.woff?jrn3mo') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="animationsicon-"],
-[class*=" animationsicon-"] {
+[class^="animationsicon-"], [class*=" animationsicon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'animationsicon' !important;
   speak: never;
@@ -49,11 +39,9 @@
 .animationsicon-loop2:before {
   content: "\e903";
 }
-
 .animationsicon-star:before {
   content: "\e901";
 }
-
 .animationsicon-mainanim:before {
   content: "\e902";
 }

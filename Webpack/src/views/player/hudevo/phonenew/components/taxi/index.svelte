@@ -117,7 +117,7 @@
         <div class="newphone__maps_content">
             <div class="box-flex">
                 <div class="newphone__maps_headerimage taxi"></div>
-                <div class="newphone__maps_headertitleGPS newphone__shadow"><span class="orange">Red</span>Age Taxi</div>
+                <div class="newphone__maps_headertitleGPS newphone__shadow">Revolution Taxi</div>
             </div>
         </div>
 

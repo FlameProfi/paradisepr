@@ -50,6 +50,13 @@
         activeMain = 0,
         holder = viewData.holder,
         placeholder = "";
+    // let
+    //     type = 1,
+    //     subdata = 'xuyxuy',   
+    //     number = "1234141441",
+    //     activeMain = 0,
+    //     holder = "xuyxuy xuy",
+    //     placeholder = "xuy xuy";
 
 
     window.atm = {
