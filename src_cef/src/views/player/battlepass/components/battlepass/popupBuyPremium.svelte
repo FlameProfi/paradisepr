@@ -5,7 +5,7 @@
     import { accountRedbucks } from 'store/account'
     import { executeClientToGroup, executeClientAsyncToGroup} from 'api/rage'
 
-    const pricePremium = 19999;
+    const pricePremium = 2500;
 
     let isPremium = 0;
     executeClientAsyncToGroup("getPremium").then((result) => {

@@ -9,17 +9,17 @@
         {
             name: translateText('player', '1 УРОВЕНЬ'),
             lvl: 1,
-            priceRB: 1600
+            priceRB: 300
         },
         {
             name: translateText('player', '5 УРОВНЕЙ'),
             lvl: 5,
-            priceRB: 6666
+            priceRB: 1350
         },
         {
             name: translateText('player', '25 УРОВНЕЙ'),
             lvl: 25,
-            priceRB: 29999
+            priceRB: 6750
         },
     ]
 
