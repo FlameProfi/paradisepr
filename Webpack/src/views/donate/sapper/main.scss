@@ -34,7 +34,7 @@
             position: absolute;
             width: 100%;
             @include fluid("bottom", 15);
-            height: 100%;  
+            height: 100%;
             left: 0;
             z-index: 0;
         }
@@ -88,12 +88,12 @@
                 .n {
                     color: #FF5271;
                     font-weight: bold;
-                    @include fluid("font-size", 48);
+                    @include fluid("font-size", 48)
                 }
                 & p {
                     font-weight: 500;
                     color: #656565;
-                    @include fluid("font-size", 14);
+                    @include fluid("font-size", 14)
                 }
                
             }

@@ -108,11 +108,11 @@
 
 	import QuestsDialog from "@/views/quests/dialog/index.svelte";
 
-	//import QuestsDialog1 from '@/views/quests/questsnew/questsnewdialog/index.svelte';
-	//import QuestsDialog2 from '@/views/quests/questsnew/questsnewlist/index.svelte';
-	//import QuestsDialog3 from '@/views/quests/questsnew/questsprise/index.svelte';
+	// import QuestsDialog1 from '@/views/quests/questsnew/questsnewdialog/index.svelte';
+	// import QuestsDialog2 from '@/views/quests/questsnew/questsnewlist/index.svelte';
+	// import QuestsDialog3 from '@/views/quests/questsnew/questsprise/index.svelte';
 
-	import EventsValentine from "@/views/events/valentine/index.svelte";
+	//import EventsValentine from "@/views/events/valentine/index.svelte";
 
 	//House
 	import HouseMenu from "@/views/house/menu/index.svelte";
@@ -188,10 +188,10 @@
 		DonateSapper,
 
 		QuestsDialog,
-		//QuestsDialog1,
-		//QuestsDialog2,
-		//QuestsDialog3,
-		EventsValentine,
+		// QuestsDialog1,
+		// QuestsDialog2,
+		// QuestsDialog3,
+		//EventsValentine,
 
 		HouseBuy,
 		HouseMenu,

@@ -32,7 +32,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html",
-            title: `Revolution - ${new Date()}`,
+            title: `RedAge - ${new Date()}`,
             filename: './index.html',
             inject: false,
         }),

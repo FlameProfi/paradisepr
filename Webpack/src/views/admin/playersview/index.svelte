@@ -31,7 +31,7 @@
 <div class="plist">
     <div class="head">
         <img src={SmallLogo} alt="SmallLogo"/>
-        <h1>RevolutionRP</h1>
+        <h1>Revolution RP</h1>
         <span>Players: {items.length}</span>
     </div>
     <div class="list">

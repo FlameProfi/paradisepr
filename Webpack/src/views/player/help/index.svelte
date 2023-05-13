@@ -50,7 +50,7 @@
     import AirDrop from './elements/events/AirDrop.svelte';
     import Azart from './elements/events/Azart.svelte';
     import BizCapt from './elements/events/BizCapt.svelte';
-    import Everyday from './elements/events/everyday.svelte';
+    import Everyday from './elements/events/Everyday.svelte';
     import GunGame from './elements/events/GunGame.svelte';
     import StreetCar from './elements/events/StreetCar.svelte';
     import HeliCrash from './elements/events/HeliCrash.svelte';

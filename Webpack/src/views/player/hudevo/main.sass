@@ -122,9 +122,9 @@ $circleTransitionDelay: 185ms
         @include fluid("padding-right", 9)
         @include fluid("padding-top", 6)
         @include fluid("padding-bottom", 6)
-        @include fluid("border", 1, "solid")
-        border-image-source: rgba(255, 255, 255, 0.38) !important
-        border-radius: 1000px
+        @include fluid("border", 2, "solid")
+        border-image-source: linear-gradient(43.64deg, rgba(248, 40, 71, 0) -1.83%, #8bfbfb 73.21%) !important
+        border-image-slice: 1 !important
     .gift
         display: flex
         flex-direction: column
@@ -416,7 +416,7 @@ $circleTransitionDelay: 185ms
             @include fluid("font-size", 37)
             @include fluid("line-height", 45)
             .span
-                color: #FF9942
+                color: #8bfbfb
         .hudevo__playerinfo_online
             display: flex
             align-items: center
@@ -432,7 +432,7 @@ $circleTransitionDelay: 185ms
                 @include fluid("font-size", 12)
         .hudevo__playerinfo_name
             //background: #FF9942
-            background: #00FFFF
+            background: #8bfbfb
             @include fluid("height", 22)
             display: flex
             align-items: center
@@ -444,7 +444,7 @@ $circleTransitionDelay: 185ms
             @include fluid("line-height", 14)
         .hudevo__playerinfo_logo
             //background: #FF9942
-            background: #00FFFF
+            background: #8bfbfb
             @include fluid("margin-left", 6)
             @include fluid("width", 41)
             @include fluid("height", 41)
@@ -492,7 +492,7 @@ $circleTransitionDelay: 185ms
             @include fluid("height", 30)
             @include fluid("font-size", 16)
             //background: #FF9942
-            background: #0000FF
+            background: #8bfbfb
         .hudevo__playerinfo_weapon
             @include fluid("width", 177)
             @include fluid("height", 60)
@@ -534,7 +534,7 @@ $circleTransitionDelay: 185ms
         .hudevo__playerinfo_red
             color: white
             //background: #FF9942
-            background: #0000FF
+            background: #8bfbfb
             @include fluid("height", 22)
             @include fluid("font-size", 14)
             font-weight: 600
@@ -941,7 +941,7 @@ $circleTransitionDelay: 185ms
                         font-family: 'RF Dewi Extended'
                         &.active
                             //background: #FF9942
-                            background: #0000FF
+                            background: #8bfbfb
                             color: white
     .hudevo__petcontrol
         display: flex
@@ -1068,7 +1068,8 @@ $circleTransitionDelay: 185ms
         .hudevo__placetime_image
             @include fluid("width", 169)
             @include fluid("height", 44)
-            background: linear-gradient(90.6deg, rgba(255, 153, 66, 0.41) 0.48%, rgba(48, 42, 29, 0) 95.3%)
+            //background: linear-gradient(90.6deg, rgba(255, 153, 66, 0.41) 0.48%, rgba(48, 42, 29, 0) 95.3%)
+            background:  linear-gradient(43.64deg, rgba(248, 40, 71, 0) -1.83%, #8bfbfb 73.21%) !important
             background-size: cover
             background-position: center
             background-repeat: no-repeat

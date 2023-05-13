@@ -103,7 +103,7 @@
         <div class="newphone__maps_content">
             <div class="box-flex">
                 <div class="newphone__maps_headerimage trucker"></div>
-                <div class="newphone__maps_headertitleGPS newphone__shadow"><span class="truckercolor">Red</span>Age Trucker</div>
+                <div class="newphone__maps_headertitleGPS newphone__shadow">Revolution Trucker</div>
             </div>
         </div>
 

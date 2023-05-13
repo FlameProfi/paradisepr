@@ -115,7 +115,7 @@
         <div class="newphone__maps_content">
             <div class="box-flex">
                 <div class="newphone__maps_headerimage mech"></div>
-                <div class="newphone__maps_headertitleGPS newphone__shadow"><span class="mechcolor">Red</span>Age Mechanic</div>
+                <div class="newphone__maps_headertitleGPS newphone__shadow">Revolution Mechanic</div>
             </div>
         </div>
 

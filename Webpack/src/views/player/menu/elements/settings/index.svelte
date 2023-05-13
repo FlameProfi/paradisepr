@@ -250,7 +250,7 @@
 	type: "VolumePhoneRadio",
 	categorie: "Sound",
 	name: translateText('settings', 'Громкость Revolution FM'),
-	desc: translateText('settings', 'Настройка, которая отвечает за громкость звуков радио Revolutione FM, которое можно включить в телефоне..'),
+	desc: translateText('settings', 'Настройка, которая отвечает за громкость звуков радио Revolution FM, которое можно включить в телефоне..'),
 	value: $storeSettings.VolumePhoneRadio,
 	min: 0,
 	max: 100,
