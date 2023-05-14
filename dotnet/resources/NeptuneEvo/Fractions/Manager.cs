@@ -465,7 +465,7 @@ namespace NeptuneEvo.Fractions
             {(int) Models.Fractions.CITY, new Vector3(-564.9131, -193.55586, 38.21585)},      // Cityhall
             {(int) Models.Fractions.POLICE, new Vector3(458.25644, -999.1341, 30.689493)},      // LSPD police
             {(int) Models.Fractions.EMS, new Vector3(322.68, -592.2, 43.2)},      // Emergency care
-            {(int) Models.Fractions.FIB, new Vector3(152.11882, -751.9469, 242.15207)},  // FBI 
+            {(int) Models.Fractions.FIB, new Vector3(2496.8337, -418.22266, 99.11166)},  // FBI 
             {(int) Models.Fractions.LCN, new Vector3(1387.338, 1155.952, 115.2144)},     // La Cosa Nostra 
             {(int) Models.Fractions.RUSSIAN, new Vector3(-115.1648, 983.5231, 236.6358)},    // Russian Mafia
             {(int) Models.Fractions.YAKUZA, new Vector3( -1464.758, -34.101257, 55.20967)},    // Yakuza 
@@ -473,7 +473,7 @@ namespace NeptuneEvo.Fractions
             {(int) Models.Fractions.ARMY, new Vector3(-2361.488, 3208.3765, 29.224823)},    // Army
             {(int) Models.Fractions.LSNEWS, new Vector3(-1064.2603, -237.59189, 44.02118)},    // LSNews -1063.046, -249.463, 44.0211
             {(int) Models.Fractions.THELOST, new Vector3(982.2743, -104.14917, 73.72877)},    // The Lost
-            {(int) Models.Fractions.PRISON, new Vector3(2154.641, 2921.034, -63.02243)},    // Prison
+            {(int) Models.Fractions.PRISON, new Vector3(1783.434, 2549.4087, 49.57706)},    // Prison
             //{(int) Models.Fractions.SHERIFF, new Vector3(1849.4763, 3695.783, 34.266933)},    // SHERIFF
             {(int) Models.Fractions.SHERIFF, new Vector3(-433.1862, 6003.6655, 31.7)},    // SHERIFF
         };
@@ -2296,7 +2296,7 @@ namespace NeptuneEvo.Fractions
             { (int) Models.Fractions.ARMY, new Vector3()},
             { (int) Models.Fractions.LSNEWS, new Vector3()},
             { (int) Models.Fractions.THELOST, new Vector3(976.768738, -103.651985, 73.725174)},
-            { (int) Models.Fractions.PRISON, new Vector3(2039.182, 2934.093, -63.02208)},
+            { (int) Models.Fractions.PRISON, new Vector3()},
             { (int) Models.Fractions.SHERIFF, new Vector3()},
         };
         public static Dictionary<int, Vector3> matsCoords = new Dictionary<int, Vector3>()
@@ -2309,7 +2309,7 @@ namespace NeptuneEvo.Fractions
             { (int) Models.Fractions.CITY, new Vector3(-636.45325, -97.71534, 38.046722 - 1.12)},
             { (int) Models.Fractions.POLICE, new Vector3(461.32843, -1015.1932, 28.080061 - 1.12)},
             { (int) Models.Fractions.EMS, new Vector3(342.3815, -563.184, 27.62377)},
-            { (int) Models.Fractions.FIB, new Vector3(175.7835, -687.82684, 32.0046)},
+            { (int) Models.Fractions.FIB, new Vector3(2473.7073, -436.69562, 92.99286)},
             { (int) Models.Fractions.LCN, new Vector3(1413.687, 1118.036, 112.838)},
             { (int) Models.Fractions.RUSSIAN, new Vector3(-128.7453, 1006.892, 234.6121)},
             { (int) Models.Fractions.YAKUZA, new Vector3(-1460.2235, -53.754063, 54.45319 - 1.12)},
@@ -2317,7 +2317,7 @@ namespace NeptuneEvo.Fractions
             { (int) Models.Fractions.ARMY, new Vector3(-530.29456, -2875.31, 5.1817595)},
             { (int) Models.Fractions.LSNEWS, new Vector3()},
             { (int) Models.Fractions.THELOST, new Vector3(977.1458, -132.7649, 72.84191)},
-            { (int) Models.Fractions.PRISON, new Vector3(-203.054, -576.0139, 33.46199)},
+            { (int) Models.Fractions.PRISON, new Vector3(1754.1077, 2622.5627, 44.56497)},
             { (int) Models.Fractions.SHERIFF, new Vector3(-463.26593, 6009.509, 30f)},
         };
         public static Dictionary<uint, int> maxMats = new Dictionary<uint, int>()
@@ -2347,14 +2347,12 @@ namespace NeptuneEvo.Fractions
                 case (int) Models.Fractions.THELOST:
                     amount = 180000;
                     break;
-                case (int) Models.Fractions.PRISON:
-                    amount = 100000;
-                    break;
                 case (int) Models.Fractions.CITY:
                     amount = 100000;
                     break;
                 case (int) Models.Fractions.POLICE:
                 case (int) Models.Fractions.FIB:
+                case (int) Models.Fractions.PRISON:
                 case (int) Models.Fractions.SHERIFF:
                     amount = 200000;
                     break;
