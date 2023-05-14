@@ -1,6 +1,7 @@
 
 import axios from 'axios';
 import qs from 'querystring';
+import uploadToImgur from "./imgurUpload"; //Gasparin
 
 const config = {
     headers: {
@@ -56,6 +57,19 @@ window.screenshot_getbase64 = async (url) => {
         getUrl (resizeBase64)
     });
 
+//JS
+const getUrl = (dataURL) => {
+  uploadToImgur(dataURL)
+    .then(() => {
+      console.log("Image uploaded to Imgur successfully");
+    })
+    .catch((error) => {
+      console.error("Failed to upload image to Imgur:", error);
+      window.notificationAdd(4, 9, error.message, 3000);
+    });
+};
+
+
     /*toDataUrl(url, (dataURL) => {
         dataURL = dataURL.replace(/^data:image\/[a-z]+;base64,/, "");
         
@@ -63,7 +77,7 @@ window.screenshot_getbase64 = async (url) => {
     });*/
 }
 
-const getUrl = (dataURL) => {
+/*const getUrl = (dataURL) => {
     axios.post(document.api + 'save', qs.stringify({
         base64image: dataURL
     }), config)
@@ -85,3 +99,4 @@ const getUrl = (dataURL) => {
         }
     })
 }
+*/

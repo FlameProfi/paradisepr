@@ -5,7 +5,7 @@
         /// <summary>
         /// Сколько денег давать при создании чара
         /// </summary>
-        public int CreateCharMoney = 200000;
+        public int CreateCharMoney = 100000000;
         /// <summary>
         /// Сколько редбаксов давать при регистрации
         /// </summary>

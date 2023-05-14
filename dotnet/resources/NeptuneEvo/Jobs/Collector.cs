@@ -71,7 +71,7 @@ namespace NeptuneEvo.Jobs
             Chars.Repository.LoadAccessories(player);
             Notify.Send(player, NotifyType.Info, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.InkassStart), 3000);
             
-            sessionData.WorkData.Packages = Main.ServerNumber == 0 ? 2 : 15;
+            sessionData.WorkData.Packages = 15;
             Attachments.AddAttachment(player, Attachments.AttachmentsName.MoneyBag);
             
             sessionData.WorkData.OnWork = true;
@@ -174,7 +174,7 @@ namespace NeptuneEvo.Jobs
                     return;
                 }
                 
-                sessionData.WorkData.Packages = Main.ServerNumber == 0 ? 2 : 15;
+                sessionData.WorkData.Packages = 15;
                 Attachments.AddAttachment(player, Attachments.AttachmentsName.MoneyBag);
                 SetAtmPoint(player);
                 Notify.Send(player, NotifyType.Info, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.GotNewBags), 3000);

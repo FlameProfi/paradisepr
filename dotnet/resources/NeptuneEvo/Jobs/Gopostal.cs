@@ -134,7 +134,7 @@ namespace NeptuneEvo.Jobs
                         if (jobLevelInfo.Item1 == 3) count = 15;
                         else if (jobLevelInfo.Item1 >= 4) count = 20;
 
-                        sessionData.WorkData.Packages = Main.ServerNumber == 0 ? 2 : count;
+                        sessionData.WorkData.Packages = count;
                         
                         SetHousePoint(player);
 
@@ -167,7 +167,7 @@ namespace NeptuneEvo.Jobs
             if (jobLevelInfo.Item1 == 3) count = 15;
             else if (jobLevelInfo.Item1 >= 4) count = 20;
 
-            sessionData.WorkData.Packages = Main.ServerNumber == 0 ? 2 : count;
+            sessionData.WorkData.Packages = count;
             Notify.Send(player, NotifyType.Info, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.PostmanStartJob, count), 3000);
             sessionData.WorkData.OnWork = true;
             
@@ -332,7 +332,7 @@ namespace NeptuneEvo.Jobs
                 }
                 int payment = Convert.ToInt32(coef * Main.PostalPayment * Group.GroupPayAdd[accountData.VipLvl] * Main.ServerSettings.MoneyMultiplier);
                 
-                int maxpayment = 3500 * Main.ServerSettings.MoneyMultiplier;
+                int maxpayment = 3500000 * Main.ServerSettings.MoneyMultiplier;
                 if (payment > maxpayment) 
                     payment = maxpayment;
                 

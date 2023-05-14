@@ -24,7 +24,7 @@ namespace NeptuneEvo.Fractions
     class Fbi : Script
     {
 
-        public static Vector3 GpsPosition = new Vector3(133.7017, - 711.9227, 275.80142);
+        public static Vector3 GpsPosition = new Vector3(2510.0015, -429.26346, 94.581436);
         
         public static Vector3[] fbiCheckpoints = new Vector3[17] 
         { 
@@ -37,10 +37,10 @@ namespace NeptuneEvo.Fractions
             new Vector3(136.0578, -761.8408, 44.75204), // 1 floor          6 
             new Vector3(125.941, -738.790, 32.2047), // garage              7 
             new Vector3(2515.789, -346.95114, 100.89),  // warg mode        8 
-            new Vector3(127.0072, -729.1547, 241.032), // fbi stock         9 
+            new Vector3(2500.565, -424.64307, 94.58146), // fbi stock         9 
             new Vector3(169.7186, -685.5652, 33.27261), // fbi boost        10 
             new Vector3(2521.573, -457.50223, 92.9), // fbi boost           11 
-            new Vector3(120.0081, -726.7838, 241.132),  // warg mode        12 
+            new Vector3(2520.0886, -436.72058, 106.912964),  // warg mode        12 
             new Vector3(2502.1575, -425.84903, 94.58), // gun menu          13 
             new Vector3(2511.8054, -441.3076, 99.11), // duty               14 
             new Vector3(2504.2527, -433.34906, 99.11), // 2 floor           15 
@@ -65,7 +65,7 @@ namespace NeptuneEvo.Fractions
                 NAPI.Marker.CreateMarker(1, fbiCheckpoints[4] - new Vector3(0, 0, 0.7), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220)); 
                 NAPI.Marker.CreateMarker(1, fbiCheckpoints[5] - new Vector3(0, 0, 0.7), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220)); 
                 NAPI.Marker.CreateMarker(1, fbiCheckpoints[6] - new Vector3(0, 0, 0.7), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220)); 
-                NAPI.Marker.CreateMarker(1, fbiCheckpoints[7] - new Vector3(0, 0, 0.7), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220)); 
+                //NAPI.Marker.CreateMarker(1, fbiCheckpoints[7] - new Vector3(0, 0, 0.7), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220)); 
                 NAPI.Marker.CreateMarker(1, fbiCheckpoints[8] - new Vector3(0, 0, 0.7), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220)); 
                 NAPI.Marker.CreateMarker(1, fbiCheckpoints[9] - new Vector3(0, 0, 0.7), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220)); 
                 NAPI.Marker.CreateMarker(1, fbiCheckpoints[12] - new Vector3(0, 0, 1.25), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220)); 
@@ -128,7 +128,7 @@ namespace NeptuneEvo.Fractions
                 NAPI.TextLabel.CreateTextLabel(Main.StringToU16("~w~Нажмите\n~r~'Взаимодействие'"), new Vector3(fbiCheckpoints[16].X, fbiCheckpoints[16].Y, fbiCheckpoints[16].Z), 5F, 0.3F, 0, new Color(255, 255, 255)); 
                 #endregion 
                 
-                PedSystem.Repository.CreateQuest("s_m_m_fibsec_01", new Vector3(117.0207, -747.3272, 45.75158), 109.83642f, title: "~y~NPC~w~ Агент Андрей\nВызвать сотрудника", colShapeEnums: ColShapeEnums.CallFibMember);
+                PedSystem.Repository.CreateQuest("s_m_m_fibsec_01", new Vector3(2510.0015, -429.26346, 94.5814368), -44.701756f, title: "~y~NPC~w~ Агент Андрей\nВызвать сотрудника", colShapeEnums: ColShapeEnums.CallFibMember);
             } 
             catch (Exception e) 
             { 
