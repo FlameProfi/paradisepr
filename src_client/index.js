@@ -438,6 +438,8 @@ require('./events/mafia_game.js');
 require('./events/tankRoyale.js');
 require('./events/matwar.js');
 
+require('./containers/containers.js');
+
 
 require('./polygons/index.js');
 require('./phone/index.js');

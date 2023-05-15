@@ -70,11 +70,11 @@
         <div class="newphone__ads_text">{selectItem.text}</div>
         <div class="box-between w-1">
             <div class="newphone__ads_gray">{translateText('player2', 'Начальная ставка')}:</div>
-            <div class="newphone__ads_gray">${format("money", selectItem.createPrice)}</div>
+            <div class="newphone__ads_gray">R{format("money", selectItem.createPrice)}</div>
         </div>
         <div class="box-between w-1">
             <div class="newphone__ads_gray green">{translateText('player2', 'Текущая ставка')}:</div>
-            <div class="newphone__ads_gray green">${format("money", selectItem.lastPrice)}</div>
+            <div class="newphone__ads_gray green">R{format("money", selectItem.lastPrice)}</div>
         </div>
     </div>
     {#if !isBet}

@@ -94,7 +94,7 @@
            on:blur={onInputBlur} bind:value={price}>
     <div class="newphone__project_button auction mb-0" on:click={() => isConfirmed = true}>{translateText('player2', 'Выставить лот')}</div>
 {:else}
-    <div class="newphone__ads_title newphone__project_padding20">{translateText('player2', 'Выставить лот за')} ${price}? {translateText('player2', 'Помните, что аукцион нельзя отменить')}.</div>
+    <div class="newphone__ads_title newphone__project_padding20">{translateText('player2', 'Выставить лот за')} R{price}? {translateText('player2', 'Помните, что аукцион нельзя отменить')}.</div>
     <div class="newphone__project_button auction mb-6" on:click={onSend}>{translateText('player2', 'Я уверен')}</div>
     <div class="newphone__project_button auction mb-0" on:click={() => isConfirmed = false}>{translateText('player2', 'Я не уверен')}</div>
 {/if}

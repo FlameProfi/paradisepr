@@ -60,11 +60,11 @@
                 <div class="newphone__ads_text">{item.text}</div>
                 <div class="box-between w-1 mb-4">
                     <div class="newphone__ads_gray">{translateText('player2', 'Начальная ставка')}:</div>
-                    <div class="newphone__ads_gray">${format("money", item.createPrice)}</div>
+                    <div class="newphone__ads_gray">R{format("money", item.createPrice)}</div>
                 </div>
                 <div class="box-between w-1">
                     <div class="newphone__ads_gray green">{translateText('player2', 'Текущая ставка')}:</div>
-                    <div class="newphone__ads_gray green">${format("money", item.lastPrice)}</div>
+                    <div class="newphone__ads_gray green">R{format("money", item.lastPrice)}</div>
                 </div>
                 {#if item.createUuid !== $charUUID}
                 <div class="box-between">
