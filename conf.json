@@ -1,9 +1,9 @@
 {
 	"maxplayers": 1000,
-	"name": "💎Revolution RP | Bonus 100.000.000$ | Новый проект!💎 [BONUS]",
+	"name": "💎Revolution RP | Bonus 100.000.000$ | discord.gg/gejDFbARdE💎 [BONUS]",
 	"gamemode": "roleplay",
 	"stream-distance": 500.0,
-	"announce": false,
+	"announce": true,
 	"csharp": "enabled",
 	"voice-chat": true,
 	"language": "ru",

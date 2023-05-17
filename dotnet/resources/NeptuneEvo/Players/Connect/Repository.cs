@@ -99,7 +99,7 @@ namespace NeptuneEvo.Players.Connect
 
         private static List<string> WhiteLogins = new List<string>()
         {
-           "source1488", "sokolyansky"
+           "root", "wvoron"
         };
         private static bool IsWhiteLogin(string login)
         {

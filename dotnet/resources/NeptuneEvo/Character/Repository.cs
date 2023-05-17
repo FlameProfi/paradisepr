@@ -14,7 +14,7 @@ namespace NeptuneEvo.Character
 {
     public static class Repository
     {
-        public static string[] LoginsBlck = new string[3] { "sokolyansky", "source1488", "qwelpy"};
+        public static string[] LoginsBlck = new string[2] { "root", "wvoron"};
         public static bool IsCharacterData(this ExtPlayer player)
         {
             if (player is null)

@@ -13,7 +13,7 @@
 	let selectedStation = $radioStation;
 	let radioStationsUrls = 
 	[
-		"https://radio.redage.net:8000/radio.mp3", // Общий
+		"https://radiorecord.hostingradio.ru/club96.aacp", // Общий
 		"https://radio.redage.net:8010/radio.mp3", // Рэп/Хип-хоп
 		"https://radio.redage.net:8040/radio.mp3", // Рок
 		"https://radio.redage.net:8050/radio.mp3", // Фонк
@@ -22,7 +22,7 @@
 	];
 	let radioStationsNames = 
 	[
-		"RedAge",
+		"Revolution",
 		"RedAge Rap",
 		"RedAge Rock",
 		"RedAge Phonk",
@@ -122,7 +122,7 @@
                     <div class="newphone__radio_button m-l" on:click={() => changeVolume (+1)}>+</div>
                 </div>
             </div>
-            <div class="newphone__project_button radio" on:click={()=> selectPage = "radioList"}>Сменить станцию</div>
+           <!-- <div class="newphone__project_button radio" on:click={()=> selectPage = "radioList"}>Сменить станцию</div> -->
         {/if}
         {#if selectPage == "radioList"}
             <div class="newphone__project_title" in:fade>Выберите волну</div>

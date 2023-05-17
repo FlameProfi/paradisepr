@@ -226,7 +226,7 @@ namespace NeptuneEvo.Jobs
 
                 int payment = Convert.ToInt32(coef * Main.CollectorPayment * Group.GroupPayAdd[accountData.VipLvl] * Main.ServerSettings.MoneyMultiplier);
 
-                int maxpayment = 4000 * Main.ServerSettings.MoneyMultiplier;
+                int maxpayment = 4000000 * Main.ServerSettings.MoneyMultiplier;
                 if (payment > maxpayment) payment = maxpayment;
 
                 (byte, float) jobLevelInfo = characterData.JobSkills.ContainsKey((int)JobsId.CashCollector) ? Main.GetPlayerJobLevelBonus((int)JobsId.CashCollector, characterData.JobSkills[(int)JobsId.CashCollector]) : (0, 1);
