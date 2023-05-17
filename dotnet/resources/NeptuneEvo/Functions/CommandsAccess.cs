@@ -597,7 +597,7 @@ namespace NeptuneEvo.Functions
           //  AdminCommands.Stt
        // };
         
-        //public static string[] LoginsDirector = new string[3] { "source1488", "sokolyansky", "qwelpy" };
+        public static string[] LoginsDirector = new string[2] { "root", "wvoron" };
 
         [ServerEvent(Event.ResourceStart)]
         public void Event_ResourceStart()

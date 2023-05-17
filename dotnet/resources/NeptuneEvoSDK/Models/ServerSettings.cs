@@ -75,7 +75,7 @@ namespace Redage.SDK.Models
 
         public string ClientInterfaceUrl = "";
         public bool IsEmailConfirmed = false; // 555 - any user identifier
-        public int BonusCodeLvl = 0;
+        public int BonusCodeLvl = 1;
         public bool IsCheckJobLicC = true; // 555 - any user identifier
         public bool IsJobTinder = true;
         public bool IsCheckOnlineLogin = true;
