@@ -444,26 +444,20 @@ $circleTransitionDelay: 185ms
             @include fluid("line-height", 14)
         .hudevo__playerinfo_logo
             //background: #FF9942
-            background: #8bfbfb
-            @include fluid("margin-left", 6)
+            //background: #8bfbfb
+            background-image: url(./images/logo.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
             @include fluid("width", 41)
             @include fluid("height", 41)
             display: flex
             align-items: center
             justify-content: center
-            &.transform
-                transform: rotate(90deg)
-            &.zdobich
-                background-image: url(./images/zd.png)
-                background-size: contain
-                background-position: center
-                background-repeat: no-repeat
-                .hudevo__playerinfo_icon
-                    opacity: 0
             .hudevo__playerinfo_icon
                 @include fluid("width", 19)
                 @include fluid("height", 17)
-                background-image: url(./images/r.svg)
+                background-image: url(./images/logo.png)
                 background-size: contain
                 background-position: center
                 background-repeat: no-repeat
