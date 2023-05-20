@@ -80,10 +80,10 @@
                     <span class="bortovoiicon-list"></span>
                     <div class="weazelnews__nav_text">{translateText('fractions', 'Объявления')} <span class="red">{count}</span></div>
                 </div>
-                <div class="weazelnews__nav_element" class:active={selectView === "Live"} on:click={() => selectView = "Live"}>
+                <!--<div class="weazelnews__nav_element" class:active={selectView === "Live"} on:click={() => selectView = "Live"}>
                     <span class="bortovoiicon-call"></span>
                     <div class="weazelnews__nav_text">{translateText('fractions', 'Прямой эфир')}</div>
-                </div>
+                </div>-->
                 <div class="line mt-24"></div>
                 <div class="line mt-auto"></div>
                 <div class="box-column">
