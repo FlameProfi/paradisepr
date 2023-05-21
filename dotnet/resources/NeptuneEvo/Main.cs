@@ -225,7 +225,7 @@ namespace NeptuneEvo
         }
         #region ECONOMYCONFIG
         public static float BusinessMinPrice = 0.95f;
-        public static float BusinessMaxPrice = 1.75f;
+        public static float BusinessMaxPrice = 1.20f;
         public static int DrugsPrice = 30;
         public static int[] BuswaysPayments = new int[6] { 4, 5, 4, 5, 5, 8 };
         public static int CollectorPayment = 7;

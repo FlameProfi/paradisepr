@@ -1279,10 +1279,6 @@ namespace NeptuneEvo.Chars
                         if (characterData.Licenses[8]) returnText = LangFunc.GetText(LangType.Ru, DataName.CaseWinParamedic);
                         else returnText = LangFunc.GetText(LangType.Ru, DataName.CaseWinParamedicEst);
                         break;
-                    case "Сим-карта":
-                        if (characterData.Sim != -1) returnText = LangFunc.GetText(LangType.Ru, DataName.CaseWinSimCard, Amount);
-                        else returnText = LangFunc.GetText(LangType.Ru, DataName.CaseWinSimCard, Amount);
-                        break;
                     case "Чай":
                         returnText = LangFunc.GetText(LangType.Ru, DataName.CaseWinTea, Amount);
                         break;

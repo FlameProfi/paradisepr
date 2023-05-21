@@ -215,6 +215,9 @@ gm.events.add('mineJob_startMining', () => {
                 } else {
                     mp.events.callRemote('PlayerMinedResources');
                 }
+                mp.events.call('mineJob_stopMining');// to do fix miner
+                mp.events.call('notify', 1, 9, translateText("Нажмите E для продолжение"), 3000);
+                return;
             }
         }, 500);
     }

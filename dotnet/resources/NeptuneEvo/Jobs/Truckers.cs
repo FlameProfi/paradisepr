@@ -234,7 +234,7 @@ namespace NeptuneEvo.Jobs
 
                 var coef = Group.GroupPayAdd[accountData.VipLvl];
                 var payment = Players.Phone.Property.Businesses.Orders.Repository.GetPrice(bizOrder.Amount, bizOrder.Name, coef);
-                
+
                 MoneySystem.Wallet.Change(player, payment);
                 GameLog.Money($"server", $"player({characterData.UUID})", payment, $"truckerCheck");
                 var ow = (ExtPlayer) NAPI.Player.GetPlayerFromName(biz.Owner);
