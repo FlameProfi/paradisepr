@@ -1,11 +1,13 @@
 <script>
     import { translateText } from 'lang'
     import { setGroup, executeClientAsyncToGroup } from 'api/rage'
-    import { charName, FractionLVL } from 'store/chars';
+    import { charData } from 'store/chars';
     import { TimeFormat, GetTime } from 'api/moment'
+    import fraction from 'json/fraction.js'
     import { serverDateTime } from 'store/server'
     setGroup (".advert.");
 
+    let selectCharData = $charData;
     let selectedAddId;
 
     executeClientAsyncToGroup("getSelected").then((result) => {
@@ -80,15 +82,15 @@
                     <span class="bortovoiicon-list"></span>
                     <div class="weazelnews__nav_text">{translateText('fractions', 'Объявления')} <span class="red">{count}</span></div>
                 </div>
-                <div class="weazelnews__nav_element" class:active={selectView === "Live"} on:click={() => selectView = "Live"}>
+                <!--<div class="weazelnews__nav_element" class:active={selectView === "Live"} on:click={() => selectView = "Live"}>
                     <span class="bortovoiicon-call"></span>
                     <div class="weazelnews__nav_text">{translateText('fractions', 'Прямой эфир')}</div>
-                </div>
+                </div>-->
                 <div class="line mt-24"></div>
                 <div class="line mt-auto"></div>
                 <div class="box-column">
-                    <div class="weazelnews__name mt-24">{$charName}</div>
-                    <div class="weazelnews__rank">{$FractionLVL}</div>
+                    <div class="weazelnews__name mt-24">{selectCharData.Name}</div>
+                    <div class="weazelnews__rank">{selectCharData.FractionLVL}</div>
                 </div>
                 <div class="line mt-24"></div>
                 <div class="weazelnews__flag"></div>

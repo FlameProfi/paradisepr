@@ -551,6 +551,7 @@ namespace NeptuneEvo.Functions
             { AdminCommands.setgarage, 9 },
             { AdminCommands.removehouse, 9 },
             { AdminCommands.housechange, 9 },
+            { AdminCommands.SaveServer, 99 },
 
 
 

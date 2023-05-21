@@ -420,7 +420,8 @@ namespace NeptuneEvo.MoneySystem
                     Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.WantedNOATM), 3000);
                     return;
                 }
-                if (characterData.Bank == 0 || !Bank.Accounts.ContainsKey(characterData.Bank))
+                if (characterData.Bank == 0)
+                //if (characterData.Bank == 0 || !Bank.Accounts.ContainsKey(characterData.Bank))
                 {
                     Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.NoBanks), 3000);
                     return;

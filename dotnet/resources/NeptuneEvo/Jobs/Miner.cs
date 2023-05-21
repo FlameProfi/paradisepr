@@ -26,6 +26,7 @@ using NeptuneEvo.Quests.Models;
 using NeptuneEvo.Table.Tasks.Models;
 using NeptuneEvo.Table.Tasks.Player;
 using NeptuneEvo.VehicleData.LocalData;
+using System.Timers;
 
 namespace NeptuneEvo.Jobs
 {
@@ -378,7 +379,7 @@ namespace NeptuneEvo.Jobs
         }
 
         [RemoteEvent("PlayerFinishedMining")]
-        public static void RemoteEvent_PlayerFinishedMining(ExtPlayer player)
+        public static void RemoteEvent_PlayerFinishedMining(ExtPlayer player, ElapsedEventArgs eventArgs)
         {
             try
             {

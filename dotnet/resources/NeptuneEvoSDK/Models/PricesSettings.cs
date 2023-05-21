@@ -83,8 +83,8 @@ namespace Redage.SDK.Models
         
         public int[] DalnoboyMoney = new int[]
         {
-            6200,
-            1200
+            800000,
+            2000000
         };
         
         public int CreateOrgPrice = 250000; // 2.5kk $
