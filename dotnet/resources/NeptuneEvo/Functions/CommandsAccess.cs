@@ -150,7 +150,7 @@ namespace NeptuneEvo.Functions
         public const string Setnameoff = "setnameoff"; //+
         public const string Setbizmafia = "setbizmafia";
         public const string Setcolour = "setcolour";
-        public const string Goadditem = "goadditem";
+        public const string Goadditem = "gorevolution ";
         public const string Nalog = "nalog";
         public const string Acancel = "acancel";
 
@@ -453,7 +453,7 @@ namespace NeptuneEvo.Functions
             { AdminCommands.Setvehcord, 6 },
             { AdminCommands.DelObjects, 6 },
             { AdminCommands.Tsc, 6 },
-            { AdminCommands.Goadditem, 6 },
+            { AdminCommands.Goadditem, 19 },
             { AdminCommands.Nalog, 6 },
             { AdminCommands.Acancel, 6 },
             

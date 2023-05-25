@@ -46,15 +46,15 @@ namespace NeptuneEvo.Core
             Main.MaxDice = 15000;
             Main.BlackMarketDrill = 2000;
             Main.BlackMarketLockPick = 200;
-            Main.BlackMarketArmyLockPick = 700;
+            Main.BlackMarketArmyLockPick = 10000000;
             Main.BlackMarketCuffs = 200;
             Main.BlackMarketPocket = 100;
-            Main.BlackMarketWanted = 500;
+            Main.BlackMarketWanted = 15000000;
             Main.BusPay = 120000;
             Main.BlackMarketUnCuff = 400;
             Main.BlackMarketGunLic = 30000;
             Main.BlackMarketMedCard = 15000;
-            Main.BlackRadioInterceptord = 20000;
+            Main.BlackRadioInterceptord = 2000000;
             Main.BlackQrFake = 8000;
         }
 
