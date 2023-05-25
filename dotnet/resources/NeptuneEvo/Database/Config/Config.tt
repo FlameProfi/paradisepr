@@ -23,7 +23,7 @@
 	
 	// MySQL
 
-	LoadMySqlMetadata("127.0.0.1", "mainconfig", "root", "");
+	LoadMySqlMetadata("127.0.0.1", "mainconfig", "root", "dkfdjSWYqbds123");
 
 	GenerateModel();
 #>
