@@ -4368,7 +4368,7 @@ namespace NeptuneEvo.Core
                 foreach (ExtVehicle veh in vehs)
                 {
                     if (veh.Value != id) continue;
-                    Admin.AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) телепортировал машину к себе {veh.DisplayName} ({id})", 1, "#636363", hideAdminLevel: 9);
+                    Admin.AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) телепортировал машину к себе {veh.DisplayName} ({id})", 1, "#636363", hideAdminLevel: 10);
                     NAPI.Entity.SetEntityPosition(veh, player.Position);
                     NAPI.Entity.SetEntityRotation(veh, new Vector3(0, 0, veh.Rotation.Z));
                     GameLog.Admin($"{player.Name}", $"tpcar({id})", $"{veh.DisplayName}");
@@ -4393,7 +4393,7 @@ namespace NeptuneEvo.Core
                 foreach (ExtVehicle veh in vehs)
                 {
                     if (veh.Value != id) continue;
-                    Admin.AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) телепортировался к машине {veh.DisplayName} ({id})", 1, "#636363", hideAdminLevel: 9);
+                    Admin.AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) телепортировался к машине {veh.DisplayName} ({id})", 1, "#636363", hideAdminLevel: 10);
                     NAPI.Entity.SetEntityPosition(player, veh.Position);
                     Trigger.Dimension(player, UpdateData.GetVehicleDimension(veh));
                     GameLog.Admin($"{player.Name}", $"tptocar({id})", $"{veh.DisplayName}");
@@ -4420,7 +4420,7 @@ namespace NeptuneEvo.Core
                 foreach (ExtVehicle veh in vehs)
                 {
                     if (veh.NumberPlate == null || veh.NumberPlate != veh_number) continue;
-                    Admin.AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) телепортировался к машине {veh.DisplayName} (ID: {veh.Value}; Number: {veh.NumberPlate})", 1, "#636363", hideAdminLevel: 9);
+                    Admin.AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) телепортировался к машине {veh.DisplayName} (ID: {veh.Value}; Number: {veh.NumberPlate})", 1, "#636363", hideAdminLevel: 10);
                     NAPI.Entity.SetEntityPosition(player, veh.Position);
                     Trigger.Dimension(player, UpdateData.GetVehicleDimension(veh));
                     GameLog.Admin($"{player.Name}", $"tpcarnumber({veh_number})", $"{veh.DisplayName}");
@@ -4447,7 +4447,7 @@ namespace NeptuneEvo.Core
                 foreach (ExtVehicle veh in vehs)
                 {
                     if (veh.Value != id) continue;
-                    Admin.AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) изменил dimension машины {veh.DisplayName} ({id}) на {newDimensionNumber}.", 1, "#636363", hideAdminLevel: 9);
+                    Admin.AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) изменил dimension машины {veh.DisplayName} ({id}) на {newDimensionNumber}.", 1, "#636363", hideAdminLevel: 10);
                     veh.Dimension = (uint)newDimensionNumber;
                     GameLog.Admin($"{player.Name}", $"setdimcar({id},{newDimensionNumber})", $"{veh.DisplayName}");
                     break;

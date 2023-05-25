@@ -75,6 +75,9 @@
     let ammo = 0;
     window.hudStore.ammo = (value) => ammo = value;
 
+    let serverOnline = 999;
+    window.serverStore.serverOnline = (value) => serverOnline = value;
+
     let isShow = false;
 
     serverDonatMultiplier.subscribe(value => {
@@ -96,7 +99,6 @@
                 <div class="hudevo__playerinfo_online hudevo__elementparams paramsright">
                     <span class="hudevoicon-person"></span>ID {serverPlayerId}
                 </div>
-              <!-- <div class="hudevo__playerinfo_name">{serverName}</div> -->
             </div>
         </div>
          <div class="hudevo__playerinfo_logo"></div>
@@ -125,6 +127,13 @@
         </div>
 
         <div class="hudevo__playerinfo_icon"><div class="hudevoicon-bank"></div></div>
+    </div>
+    <div class="box-flex mb-5">
+        <div class="hudevo__playerinfo_money hudevo__elementparams paramsright">
+            <div class="box-flex">Онлайн: {serverOnline}</div>
+        </div>
+
+        <div class="hudevo__playerinfo_icon"><div class="hudevoicon-person"></div></div>
     </div>
     <div class="hudevo__weaponbox">
         <div class="hudevo__playerinfo_stars mb-5" class:newhud__hide={!$isPlayer}>

@@ -39,6 +39,7 @@ namespace Database
 		public ITable<Characters>              Characters             { get { return this.GetTable<Characters>(); } }
 		public ITable<Chatcfgs>                Chatcfg                { get { return this.GetTable<Chatcfgs>(); } }
 		public ITable<Compensations>           Compensation           { get { return this.GetTable<Compensations>(); } }
+		public ITable<Containers>              Containers             { get { return this.GetTable<Containers>(); } }
 		public ITable<Customizations>          Customization          { get { return this.GetTable<Customizations>(); } }
 		public ITable<Doorscontrols>           Doorscontrol           { get { return this.GetTable<Doorscontrols>(); } }
 		public ITable<ECandidates>             ECandidates            { get { return this.GetTable<ECandidates>(); } }
@@ -168,17 +169,23 @@ namespace Database
 	[Table("admins")]
 	public partial class Admins
 	{
-		[Column("uuid"),     PrimaryKey, NotNull] public int   Uuid     { get; set; } // int(11)
-		[Column("alog"),                 NotNull] public sbyte Alog     { get; set; } // tinyint(3)
-		[Column("elog"),                 NotNull] public sbyte Elog     { get; set; } // tinyint(3)
-		[Column("winlog"),               NotNull] public sbyte Winlog   { get; set; } // tinyint(3)
-		[Column("agm"),                  NotNull] public sbyte Agm      { get; set; } // tinyint(3)
-		[Column("kl"),                   NotNull] public sbyte Kl       { get; set; } // tinyint(3)
-		[Column("hidenick"),             NotNull] public sbyte Hidenick { get; set; } // tinyint(3)
-		[Column("hideme"),               NotNull] public sbyte Hideme   { get; set; } // tinyint(3)
-		[Column("redname"),              NotNull] public sbyte Redname  { get; set; } // tinyint(3)
-		[Column("esp"),                  NotNull] public sbyte Esp      { get; set; } // tinyint(3)
-		[Column("invise"),               NotNull] public sbyte Invise   { get; set; } // tinyint(3)
+		[Column("uuid"),     PrimaryKey,  NotNull] public int    Uuid     { get; set; } // int(11)
+		[Column("alog"),                  NotNull] public sbyte  Alog     { get; set; } // tinyint(3)
+		[Column("elog"),                  NotNull] public sbyte  Elog     { get; set; } // tinyint(3)
+		[Column("winlog"),                NotNull] public sbyte  Winlog   { get; set; } // tinyint(3)
+		[Column("agm"),                   NotNull] public sbyte  Agm      { get; set; } // tinyint(3)
+		[Column("kl"),                    NotNull] public sbyte  Kl       { get; set; } // tinyint(3)
+		[Column("hidenick"),              NotNull] public sbyte  Hidenick { get; set; } // tinyint(3)
+		[Column("hideme"),                NotNull] public sbyte  Hideme   { get; set; } // tinyint(3)
+		[Column("redname"),               NotNull] public sbyte  Redname  { get; set; } // tinyint(3)
+		[Column("esp"),                   NotNull] public sbyte  Esp      { get; set; } // tinyint(3)
+		[Column("invise"),                NotNull] public sbyte  Invise   { get; set; } // tinyint(3)
+		[Column("username"),              NotNull] public string Username { get; set; } // varchar(64)
+		[Column("password"),    Nullable         ] public string Password { get; set; } // varchar(256)
+		[Column("hash"),        Nullable         ] public string Hash     { get; set; } // varchar(256)
+		[Column("id"),          Nullable         ] public int?   Id       { get; set; } // int(11)
+		[Column("acces"),       Nullable         ] public int?   Acces    { get; set; } // int(11)
+		[Column("img_file"),    Nullable         ] public string ImgFile  { get; set; } // varchar(255)
 	}
 
 	[Table("advertised")]
@@ -231,18 +238,18 @@ namespace Database
 	[Table("banned")]
 	public partial class Banneds
 	{
-		[Column("uuid"),          NotNull    ] public int      Uuid          { get; set; } // int(11)
-		[Column("name"),          NotNull    ] public string   Name          { get; set; } // varchar(50)
-		[Column("account"),       NotNull    ] public string   Account       { get; set; } // varchar(50)
-		[Column("time"),          NotNull    ] public DateTime Time          { get; set; } // datetime
-		[Column("until"),         NotNull    ] public DateTime Until         { get; set; } // datetime
-		[Column("ishard"),        NotNull    ] public sbyte    Ishard        { get; set; } // tinyint(4)
-		[Column("ip"),               Nullable] public string   Ip            { get; set; } // varchar(255)
-		[Column("socialclub"),       Nullable] public string   Socialclub    { get; set; } // varchar(255)
-		[Column("hwid"),             Nullable] public string   Hwid          { get; set; } // varchar(256)
-		[Column("reason"),           Nullable] public string   Reason        { get; set; } // varchar(300)
-		[Column("byadmin"),          Nullable] public string   Byadmin       { get; set; } // varchar(50)
-		[Column("rgscemailhash"),    Nullable] public string   Rgscemailhash { get; set; } // varchar(128)
+		[Column("uuid"),          PrimaryKey,  NotNull] public int      Uuid          { get; set; } // int(11)
+		[Column("name"),                       NotNull] public string   Name          { get; set; } // varchar(50)
+		[Column("account"),                    NotNull] public string   Account       { get; set; } // varchar(50)
+		[Column("time"),                       NotNull] public DateTime Time          { get; set; } // datetime
+		[Column("until"),                      NotNull] public DateTime Until         { get; set; } // datetime
+		[Column("ishard"),                     NotNull] public sbyte    Ishard        { get; set; } // tinyint(4)
+		[Column("ip"),               Nullable         ] public string   Ip            { get; set; } // varchar(255)
+		[Column("socialclub"),       Nullable         ] public string   Socialclub    { get; set; } // varchar(255)
+		[Column("hwid"),             Nullable         ] public string   Hwid          { get; set; } // varchar(256)
+		[Column("reason"),           Nullable         ] public string   Reason        { get; set; } // varchar(300)
+		[Column("byadmin"),          Nullable         ] public string   Byadmin       { get; set; } // varchar(50)
+		[Column("rgscemailhash"),    Nullable         ] public string   Rgscemailhash { get; set; } // varchar(128)
 	}
 
 	[Table("battlepass")]
@@ -395,6 +402,18 @@ namespace Database
 		[Column(),          NotNull              ] public int    ItemID  { get; set; } // int(11)
 		[Column(),          NotNull              ] public string Data    { get; set; } // varchar(26)
 		[Column(),          NotNull              ] public bool   Toggled { get; set; } // tinyint(1)
+	}
+
+	[Table("containers")]
+	public partial class Containers
+	{
+		[Column("id"),       PrimaryKey,  NotNull] public int    Id       { get; set; } // int(11)
+		[Column("name"),        Nullable         ] public string Name     { get; set; } // text
+		[Column("price"),                 NotNull] public int    Price    { get; set; } // int(11)
+		[Column("donate"),      Nullable         ] public bool?  Donate   { get; set; } // tinyint(1)
+		[Column("position"),    Nullable         ] public string Position { get; set; } // text
+		[Column("rotation"),              NotNull] public string Rotation { get; set; } // text
+		[Column("loot"),        Nullable         ] public string Loot     { get; set; } // text
 	}
 
 	[Table("customization")]
@@ -604,17 +623,17 @@ namespace Database
 	[Table("fractionvehicles")]
 	public partial class Fractionvehicles
 	{
-		[Column("fraction"),    NotNull] public int    Fraction    { get; set; } // int(11)
-		[Column("number"),      NotNull] public string Number      { get; set; } // tinytext
-		[Column("model"),       NotNull] public string Model       { get; set; } // tinytext
-		[Column("position"),    NotNull] public string Position    { get; set; } // varchar(100)
-		[Column("rotation"),    NotNull] public string Rotation    { get; set; } // varchar(100)
-		[Column("rank"),        NotNull] public int    Rank        { get; set; } // int(11)
-		[Column("defaultrank"), NotNull] public int    Defaultrank { get; set; } // int(11)
-		[Column("colorprim"),   NotNull] public int    Colorprim   { get; set; } // int(11)
-		[Column("colorsec"),    NotNull] public int    Colorsec    { get; set; } // int(11)
-		[Column("components"),  NotNull] public string Components  { get; set; } // varchar(2048)
-		[Column("isDimension"), NotNull] public sbyte  IsDimension { get; set; } // tinyint(4)
+		[Column("fraction"),                NotNull] public int    Fraction    { get; set; } // int(11)
+		[Column("number"),                  NotNull] public string Number      { get; set; } // tinytext
+		[Column("model"),                   NotNull] public string Model       { get; set; } // tinytext
+		[Column("position"),    PrimaryKey, NotNull] public string Position    { get; set; } // varchar(100)
+		[Column("rotation"),                NotNull] public string Rotation    { get; set; } // varchar(100)
+		[Column("rank"),                    NotNull] public int    Rank        { get; set; } // int(11)
+		[Column("defaultrank"),             NotNull] public int    Defaultrank { get; set; } // int(11)
+		[Column("colorprim"),               NotNull] public int    Colorprim   { get; set; } // int(11)
+		[Column("colorsec"),                NotNull] public int    Colorsec    { get; set; } // int(11)
+		[Column("components"),              NotNull] public string Components  { get; set; } // varchar(2048)
+		[Column("isDimension"),             NotNull] public sbyte  IsDimension { get; set; } // tinyint(4)
 	}
 
 	[Table("fractionvehiclesbackup")]
@@ -1118,6 +1137,12 @@ namespace Database
 				t.AutoId == AutoId);
 		}
 
+		public static Banneds Find(this ITable<Banneds> table, int Uuid)
+		{
+			return table.FirstOrDefault(t =>
+				t.Uuid == Uuid);
+		}
+
 		public static Battlepasses Find(this ITable<Battlepasses> table, int AutoId)
 		{
 			return table.FirstOrDefault(t =>
@@ -1146,6 +1171,12 @@ namespace Database
 		{
 			return table.FirstOrDefault(t =>
 				t.AutoId == AutoId);
+		}
+
+		public static Containers Find(this ITable<Containers> table, int Id)
+		{
+			return table.FirstOrDefault(t =>
+				t.Id == Id);
 		}
 
 		public static Customizations Find(this ITable<Customizations> table, int Uuid)
@@ -1206,6 +1237,12 @@ namespace Database
 		{
 			return table.FirstOrDefault(t =>
 				t.Id == Id);
+		}
+
+		public static Fractionvehicles Find(this ITable<Fractionvehicles> table, string Position)
+		{
+			return table.FirstOrDefault(t =>
+				t.Position == Position);
 		}
 
 		public static Gangspoints Find(this ITable<Gangspoints> table, int Id)

@@ -33,6 +33,7 @@ namespace NeptuneEvo.Functions
         Admin7,
         Main,
         Director,
+        Vladelisa = 999,
     }
     public static class AdminCommands
     {
@@ -552,8 +553,12 @@ namespace NeptuneEvo.Functions
             { AdminCommands.removehouse, 9 },
             { AdminCommands.housechange, 9 },
             { AdminCommands.SaveServer, 99 },
-
-
+            { AdminCommands.Updateadminaccess, 99 },
+            { AdminCommands.Defaultadminaccess, 99 },
+            { AdminCommands.Drone, 99 },
+            { AdminCommands.UpdateCDN, 99 },
+            { AdminCommands.ReloadResources, 99 },
+            { AdminCommands.Refresh, 99 },
 
         });
         private static Dictionary<string, sbyte> AdminAccess = new Dictionary<string, sbyte>();
@@ -566,37 +571,6 @@ namespace NeptuneEvo.Functions
         });
 
         private static Dictionary<string, sbyte> VipAccess = new Dictionary<string, sbyte>();
-
-     //   private static string[] LoginAccess = new string[]
-//{
-     //       AdminCommands.Banlogin,
-      //      AdminCommands.Getlogin,
-       //     AdminCommands.Unbanlogin,
-      //      AdminCommands.Connecttype,
-      //      AdminCommands.Fixmerger,
-        //    AdminCommands.MoneyMultiplier,
-          //  AdminCommands.Expmultiplier,
-          //  AdminCommands.Ecosync,
-          //  AdminCommands.Bansync,
-    //        AdminCommands.Updateadminaccess,
-      //      AdminCommands.Defaultadminaccess,
-        //    AdminCommands.Redname,
-          //  AdminCommands.Drone,
-    //        AdminCommands.RefresEverydayAward,
-      //      AdminCommands.Refreshsystemstate,
-        //    AdminCommands.UpdateCDN,
-        //    AdminCommands.ReloadResources,
-        //    AdminCommands.SaveServer,
-        //    AdminCommands.Refresh,
-       //     AdminCommands.Givelvl,
-         //   AdminCommands.Givereds,
-         //   AdminCommands.Givemoney,
-           // AdminCommands.Additem,
-       //     AdminCommands.Givegun,
-         //   AdminCommands.Giveclothes,
-           /// AdminCommands.Restart,
-          //  AdminCommands.Stt
-       // };
         
         public static string[] LoginsDirector = new string[2] { "root", "wvoron" };
 

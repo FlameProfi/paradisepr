@@ -105,7 +105,7 @@ namespace NeptuneEvo.Core
             }
         }
 
-        public static void AdminsLog(int myadm, string message, byte levels_to = 2, string color = "#FFB833", bool highRankActionHide = true, byte hideAdminLevel = 8)
+        public static void AdminsLog(int myadm, string message, byte levels_to = 2, string color = "#FFB833", bool highRankActionHide = true, byte hideAdminLevel = 10)
         {
             try
             {
@@ -2381,7 +2381,7 @@ namespace NeptuneEvo.Core
 
                 if (targetSessionData == null) return;
                 if (!target.IsCharacterData()) return;
-                AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) убил игрока {target.Name} ({target.Value})", 1, "#636363", hideAdminLevel: 9);
+                AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) убил игрока {target.Name} ({target.Value})", 1, "#636363", hideAdminLevel: 10);
                 if (!targetSessionData.DeathData.IsDying) NAPI.Player.SetPlayerHealth(target, 0);
                 else Ems.ReviveFunc(target);
                 Notify.Send(player, NotifyType.Info, NotifyPosition.BottomCenter, $"Вы убили игрока {target.Name}({target.Value})", 3000);
@@ -2455,7 +2455,7 @@ namespace NeptuneEvo.Core
 
                 if (targetSessionData == null) return;
                 if (!target.IsCharacterData() || targetSessionData.DeathData.IsDying || hp < 0 || hp > 100) return;
-                AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) выставил HP({hp}) {target.Name} ({target.Value})", 1, "#636363", hideAdminLevel: 9);
+                AdminsLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) выставил HP({hp}) {target.Name} ({target.Value})", 1, "#636363", hideAdminLevel: 10);
                 NAPI.Player.SetPlayerHealth(target, hp);
                 Notify.Send(target, NotifyType.Info, NotifyPosition.BottomCenter, $"Администратор {player.Name} изменил Вам уровень здоровья на {hp}.", 3000);
                 GameLog.Admin($"{player.Name}", $"healPlayer({hp})", $"{target.Name}");
