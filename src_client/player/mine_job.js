@@ -216,6 +216,8 @@ gm.events.add('mineJob_startMining', () => {
                     mp.events.callRemote('PlayerMinedResources');
                 }
                 mp.events.call('mineJob_stopMining');// to do fix miner
+                global.trycatchtime["player/mine_job"] = new Date().getTime();
+		        mp.events.callRemote("client_trycatch", "player/mine_job", "mineJob_stopMining", e.toString());
                 mp.events.call('notify', 1, 9, translateText("Нажмите E для продолжение"), 3000);
                 return;
             }
