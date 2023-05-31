@@ -20,7 +20,7 @@ var Peds = [
     { Hash: -1398552374, Pos: new mp.Vector3(2192.614, 5596.246, 53.75177), Angle: 318.0 }, // Daniel Roberts
     { Hash: -459818001, Pos: new mp.Vector3(-215.4299, 6445.921, 31.30351), Angle: 262.0 }, // Michael Turner*/
 
-    { Hash: -39239064, Pos: new mp.Vector3(-2.1323678, -1821.9778, 29.543238), Angle: -135.49453 }, // Caleb Baker
+	{ Hash: -39239064, Pos: new mp.Vector3(-1.581039, -1821.1044, 29.543238), Angle: -135.49453 }, // Caleb Baker
 
     { Hash: 0x9D0087A8, Pos: new mp.Vector3(480.9385, -1302.576, 29.24353), Angle: 224.0 }, // jimmylishman
     { Hash: 1706635382, Pos: new mp.Vector3(-209.004, -1598.8934, 34.86), Angle: 109.549934 }, // Lamar_Davis

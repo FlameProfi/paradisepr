@@ -269,7 +269,7 @@ namespace NeptuneEvo
         
         #endregion
 
-        public static bool AutoRestart = false;
+        public static bool AutoRestart = true;
 
         public static List<string> TodayUniqueHWIDs = new List<string>();
         public static int PlayersAtOnce = 0;
@@ -513,8 +513,8 @@ namespace NeptuneEvo
             {
                 //if (ServerSettings.MoneyMultiplier >= 2) NAPI.Server.SetServerName($"{ServerName} | X{ServerSettings.MoneyMultiplier}"); // NOT WORKING AT 0.3.7
                 //CreateBlip(new BlipData(621, "Quests", new Vector3(343.895447, -1399.03381, 32.509285), 1, true, 1f));
-                
-                /*CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-358.4868, -52.37103, 53.29886), 38, true, 0.5f));
+
+                CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-358.4868, -52.37103, 53.29886), 38, true, 0.5f));
                 CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(22.71732, -1737.653, 28.18297), 38, true, 0.5f));
                 CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-1646.822, -228.72, 55.92), 38, true, 0.5f));
                 CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-2025.384, -469.42, 11.42), 38, true, 0.5f));
@@ -522,7 +522,7 @@ namespace NeptuneEvo
                 CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-975.0394, -1474.377, 5.020052), 38, true, 0.5f));
                 CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-39.57354, 211.735, 106.1348), 38, true, 0.5f));
 
-                if (ServerNumber <= 1) // Поставлены только на Black'е и отображать на Test'овом
+                if (ServerNumber <= 9) // Поставлены только на Black'е и отображать на Test'овом
                 {
                     CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-740.8164, -67.55, 41.75), 38, true, 0.5f));
                     CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-927.72, -164.84, 41.87), 38, true, 0.5f));
@@ -539,7 +539,7 @@ namespace NeptuneEvo
                     CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(281.2544, -194.9666, 61.57069), 38, true, 0.5f));
                     CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-204.1797, 308.1642, 96.94662), 38, true, 0.5f));
                     CreateBlip(new BlipData(267, LangFunc.GetText(LangType.Ru, DataName.Parking), new Vector3(-354.1708, 286.2279, 84.74282), 38, true, 0.5f));
-                }*/
+                }
 
                 CreateBlip(new BlipData(304, LangFunc.GetText(LangType.Ru, DataName.Theather), new Vector3(683.739, 570.40, 130.46), 7, true));
                 CreateBlip(new BlipData(455, LangFunc.GetText(LangType.Ru, DataName.Yacht), new Vector3(-2070.151, -1023.134, 11.9), 81, true));

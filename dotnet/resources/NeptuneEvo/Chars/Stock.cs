@@ -22,16 +22,16 @@ namespace NeptuneEvo.Chars
             {
 
                 //Парковка
-                Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-1654.0586, -242.61865, 54.936203), 32, true));
-                Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-1220.154, -654.87854, 25.901287), 32, true));
-                Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-163.9448, -2144.0898, 16.83973), 32, true));
+                //Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-1654.0586, -242.61865, 54.936203), 32, true));
+                //Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-1220.154, -654.87854, 25.901287), 32, true));
+                //Main.CreateBlip(new Main.BlipData(267, "Парковка", new Vector3(-163.9448, -2144.0898, 16.83973), 32, true));
                 //
-                Main.CreateBlip(new Main.BlipData(478, "Хранилище 'GoPostal'", new Vector3(435.34058, -647.43616, 28.27), 32, true));
+                Main.CreateBlip(new Main.BlipData(478, "Хранилище 'GoPostal'", new Vector3(132.80247, 96.28752, 83.50746), 32, true));
                 Main.CreateBlip(new Main.BlipData(525, "Центр занятости", new Vector3(436.5074, -627.4617, 28.707539), 0, true));
                 //NAPI.Marker.CreateMarker(1, new Vector3(-545.02136, -204.28348, 38.2) - new Vector3(0, 0, 1.5), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220));
                 //CustomColShape.CreateCylinderColShape(new Vector3(132.9969, 96.3529, 83.5076), 1f, 2, 0, ColShapeEnums.WarehouseEnter);
                 CustomColShape.CreateCylinderColShape(new Vector3(1048.2255, -3097.1624, -38.9999), 1f, 2, 5, ColShapeEnums.WarehouseExit);
-                PedSystem.Repository.CreateQuest("s_m_m_postal_01", new Vector3(434.7852, -648.03516, 28.73601), 28.73601f, 0, title: "~y~NPC~w~ Почтальон Александр\nСклад посылок", colShapeEnums: ColShapeEnums.Warehouse);
+                PedSystem.Repository.CreateQuest("s_m_m_postal_01", new Vector3(132.80247, 96.28752, 83.50746), 160.59474f, 0, title: "~y~NPC~w~ Почтальон Александр\nСклад посылок", colShapeEnums: ColShapeEnums.Warehouse);
             }
             catch (Exception e)
             {

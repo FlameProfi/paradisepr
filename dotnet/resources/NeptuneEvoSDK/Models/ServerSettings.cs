@@ -39,7 +39,7 @@ namespace Redage.SDK.Models
         /// <summary>
         /// Максимальная цена на мероприятиях
         /// </summary>
-        public int EventRewardLimit = 100000;
+        public int EventRewardLimit = 500000;
         /// <summary>
         /// Время через которая можно начать новый капт в минутах
         /// </summary>

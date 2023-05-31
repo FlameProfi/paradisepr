@@ -3,13 +3,9 @@
     "",
     "\\dotnet",
     "\\dotnet\\resources",
-    "\\dotnet\\resources\\Localization",
-    "\\dotnet\\resources\\Localization\\Lang",
     "\\dotnet\\resources\\NeptuneEvo",
-    "\\dotnet\\resources\\NeptuneEvoSDK",
-    "\\dotnet\\resources\\NeptuneEvoSDK\\Models",
-    "\\dotnet\\resources\\NeptuneEvo\\Jobs",
-    "\\dotnet\\resources\\NeptuneEvo\\VehicleModel"
+    "\\dotnet\\resources\\NeptuneEvo\\Core\\FakeCars"
   ],
+  "SelectedNode": "\\dotnet\\resources\\NeptuneEvo\\Fractions",
   "PreviewInSolutionExplorer": false
 }
