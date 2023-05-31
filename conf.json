@@ -3,9 +3,10 @@
 	"name": "💎Revolution RP | Bonus 100.000.000$ | discord.gg/gejDFbARdE💎 [BONUS]",
 	"gamemode": "roleplay",
 	"stream-distance": 500.0,
-	"announce": true,
+	"announce": false,
 	"csharp": "enabled",
 	"voice-chat": true,
 	"language": "ru",
-	"port": 22005
+	"port": 22005,
+	"api-threading-debugging": false
 }

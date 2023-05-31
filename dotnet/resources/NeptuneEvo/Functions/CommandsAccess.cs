@@ -559,6 +559,7 @@ namespace NeptuneEvo.Functions
             { AdminCommands.UpdateCDN, 99 },
             { AdminCommands.ReloadResources, 99 },
             { AdminCommands.Refresh, 99 },
+            { AdminCommands.RefresEverydayAward, 99 },
 
         });
         private static Dictionary<string, sbyte> AdminAccess = new Dictionary<string, sbyte>();

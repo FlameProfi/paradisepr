@@ -291,9 +291,9 @@ namespace NeptuneEvo.Core
                     NAPI.TextLabel.CreateTextLabel(Main.StringToU16($"Нажмите \n'Взаимодействие'\n~g~{moneyFlowers[b]}"), moneyFlowPoints[b] + new Vector3(0, 0, 1.125), 5F, 0.8F, 0, new Color(255, 255, 255));
                 }*/
 
-                CustomColShape.CreateCylinderColShape(new Vector3(-2.1323678, -1821.9778, 29.543238), 1.5F, 2, 0, ColShapeEnums.BlackMarket);
+                CustomColShape.CreateCylinderColShape(new Vector3(-1.581039, -1821.1044, 29.543238), 1.5F, 2, 0, ColShapeEnums.BlackMarket);
 
-                NAPI.TextLabel.CreateTextLabel(Main.StringToU16("Нажмите \n'Взаимодействие'\n~g~Caleb Baker"), new Vector3(-2.1323678, -1821.9778, 29.543238), 5F, 0.8F, 0, new Color(255, 255, 255));
+                NAPI.TextLabel.CreateTextLabel(Main.StringToU16("Нажмите \n'Взаимодействие'\n~g~Caleb Baker"), new Vector3(-1.581039, -1821.1044, 29.543238), 5F, 0.8F, 0, new Color(255, 255, 255));
 
                 for (int b = 0; b < salutePoints.Count; b++)
                 {

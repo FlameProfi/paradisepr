@@ -16,7 +16,7 @@ namespace NeptuneEvo.VehicleModel
     {
         public static readonly nLog Log = new nLog("VehicleModel.DonateAutoRoom");
         
-        public static Vector3 NpcBuyPosition = new Vector3(-1101.3359, -1351.1681, 5.0338033);
+        public static Vector3 NpcBuyPosition = new Vector3(-913.16345, -2040.8815, 9.404988);
         private static float NpcBuyRotation = -155.546776f;
         //
         public static string NpcName = "npc_donateautoroom";

@@ -27,8 +27,8 @@ namespace NeptuneEvo.Fractions
         
         public static Vector3[] DrugPoints = new Vector3[2]
         {
-            new Vector3(-1324.9908, -239.43327, 40.63545),
-            new Vector3(195.24472, 306.53012, 102.42167),
+            new Vector3(2415.4983, 4992.957, 46.212658),
+            new Vector3(126.638435, 3731.8467, 39.69269),
         };
 
         public static ExtTextLabel[] BuyDruygsLab = new ExtTextLabel[2] { null, null };

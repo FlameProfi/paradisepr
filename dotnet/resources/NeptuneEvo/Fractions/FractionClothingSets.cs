@@ -38,11 +38,11 @@ namespace NeptuneEvo.Fractions
         {
             { (int) Models.Fractions.CITY, Cityhall.CloakroomPosition },
             { (int) Models.Fractions.POLICE, Police.CloakroomPosition },
+            { (int) Models.Fractions.PRISON, Prison.CloakroomPosition },
             { (int) Models.Fractions.EMS, Ems.emsCheckpoints[4] },
             { (int) Models.Fractions.FIB, Fbi.fbiCheckpoints[0] },
             { (int) Models.Fractions.ARMY, Army.ArmyCheckpoints[1] },
             { (int) Models.Fractions.LSNEWS, LSNews.LsNewsSystem.LSNewsCoords[0] },
-            { (int) Models.Fractions.PRISON, Prison.CloakroomPosition },
             { (int) Models.Fractions.SHERIFF, Sheriff.CloakroomPosition },
         };
 

@@ -300,8 +300,8 @@ namespace NeptuneEvo.Core
         {
             try
             {
-                Main.CreateBlip(new Main.BlipData(73, "Premium Clothes Shop", new Vector3(-1126.9141, -1440.1637, 4.108331), 35, true, 1f));
-                PedSystem.Repository.CreateQuest("a_m_y_hipster_01", new Vector3(-1126.9141, -1440.1637, 4.108331 + 1.12), -63.85f, title: "~y~NPC~w~ Вовчик", colShapeEnums: ColShapeEnums.PremiumShop);
+                Main.CreateBlip(new Main.BlipData(73, "Premium Clothes Shop", new Vector3(-710.5957, -153.30434, 37.415173), 35, true, 1f));
+                PedSystem.Repository.CreateQuest("a_m_y_hipster_01", new Vector3(-710.5957, -153.30434, 37.415173), 116.66035f, title: "~y~NPC~w~ Вовчик", colShapeEnums: ColShapeEnums.PremiumShop);
 
                 using MySqlCommand cmd = new MySqlCommand()
                 {
@@ -543,13 +543,13 @@ namespace NeptuneEvo.Core
                 "BmwI8",
                 "rrcullinan",
                 "urus",
-                "vapside",
+                "vapidse",
                 "16challenger",
                 "silvias15",
                 "AudiRS7",
                 "BMWM5",
                 "BMWX6",
-                "porchegt4",
+                "porschegt4",
                 "bmwm8",
                 "sian",
                 "AudiTT",

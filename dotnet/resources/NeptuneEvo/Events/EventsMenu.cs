@@ -20,10 +20,10 @@ namespace NeptuneEvo.Events
         {
             try
             {
-                CustomColShape.CreateSphereColShape(new Vector3(-488.47617, -401.0276, 34.79613), 7f, 0, ColShapeEnums.EventsMenu);
-                PedSystem.Repository.CreateQuest("a_m_m_afriamer_01", new Vector3(-486.10715, -399.39944, 34.546597), -47.65183f, title: "~y~NPC~w~ Саня\nПрофессиональный игроман");
+                CustomColShape.CreateSphereColShape(new Vector3(-266.19415, -2017.395, 30.145597), 7f, 0, ColShapeEnums.EventsMenu);
+                PedSystem.Repository.CreateQuest("a_m_m_afriamer_01", new Vector3(-266.19415, -2017.395, 30.145597), -133.3154f, title: "~y~NPC~w~ Саня\nПрофессиональный игроман");
                 //NAPI.Marker.CreateMarker(1, new Vector3(-478.86032, -395.27307, 34.027653 - 1.25), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220));
-                Main.CreateBlip(new Main.BlipData(491, LangFunc.GetText(LangType.Ru, DataName.Events), new Vector3(-483.149, -400.09946, 34.546608), 6, true));
+                Main.CreateBlip(new Main.BlipData(491, LangFunc.GetText(LangType.Ru, DataName.Events), new Vector3(-266.19415, -2017.395, 30.145597), 6, true));
             }
             catch (Exception e)
             {
