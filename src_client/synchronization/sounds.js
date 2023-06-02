@@ -1,12 +1,12 @@
 
-let soundApiBrowser = mp.browsers.new("https://revolution-rp.ru/redagecdn/soundapi/index.html");
+let soundApiBrowser = mp.browsers.new("https://revolution-rp.ru/gogaidinaxuy/soundapi/index.html");
 
 let isBrowserLoadingFailed = false;
 mp.events.add('browserLoadingFailed', (browser) => {
     if (browser == soundApiBrowser && !isBrowserLoadingFailed) {
         isBrowserLoadingFailed = true;
         soundApiBrowser.destroy();
-        soundApiBrowser = mp.browsers.new("https://revolution-rp.ru/redagecdn/soundapi/index.html");
+        soundApiBrowser = mp.browsers.new("https://revolution-rp.ru/gogaidinaxuy/soundapi/index.html");
     }
 });
 

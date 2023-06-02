@@ -17,9 +17,9 @@ namespace NeptuneEvo.SystemsByAdminov
     {
         #region Data
         private Random _rndm = new Random();
-        private bool canRate = false;
+        private bool canRate = true;
         private Timer _checkDateTime;
-        nLog log = new nLog("ContainerSystem by Adminov");
+        nLog log = new nLog("ContainerSystem by xuesos");
 
         private const string CONTAINER_MODEL = "prop_container_01d";
         private const int STARTED_RATE_MONEY = 1000000;
@@ -29,10 +29,10 @@ namespace NeptuneEvo.SystemsByAdminov
         {
             17,18,19
         };
-        private List<int> _donateContainersIds = new List<int> // тут id, поэтому -1. Пример: 9 контейнер это 8 id
-        {
-            6,7,8
-        };
+        // private List<int> _donateContainersIds = new List<int> // тут id, поэтому -1. Пример: 9 контейнер это 8 id
+        // {
+        //     6,7,8
+        // };
 
         private List<ContainerPrize> _containerPrizes = new List<ContainerPrize>();
 
@@ -41,26 +41,23 @@ namespace NeptuneEvo.SystemsByAdminov
         private List<ContainerRate> _playersWhoRatesContainer3 = new List<ContainerRate>();
         private List<ContainerRate> _playersWhoRatesContainer4 = new List<ContainerRate>();
         private List<ContainerRate> _playersWhoRatesContainer5 = new List<ContainerRate>();
-        private List<ContainerRate> _playersWhoRatesContainer6 = new List<ContainerRate>();
-        private List<ContainerRate> _playersWhoRatesContainer7 = new List<ContainerRate>();
-        private List<ContainerRate> _playersWhoRatesContainer8 = new List<ContainerRate>();
+        // private List<ContainerRate> _playersWhoRatesContainer6 = new List<ContainerRate>();
+        // private List<ContainerRate> _playersWhoRatesContainer7 = new List<ContainerRate>();
+        // private List<ContainerRate> _playersWhoRatesContainer8 = new List<ContainerRate>();
         private List<ContainerRate> _playersWhoRatesContainer9 = new List<ContainerRate>();
 
         private List<GTANetworkAPI.Object> _containers = new List<GTANetworkAPI.Object>();
         private List<TextLabel> _containersTexts = new List<TextLabel>();
         private List<ColShape> _containersColshapes = new List<ColShape>();
 
-        private List<Vector3> _containersPositions = new List<Vector3> 
-        { 
+        private List<Vector3> _containersPositions = new List<Vector3>
+        {
             new Vector3(1211.1191, -2969.806, 4.866059),
             new Vector3(1211.1191, -2974.806, 4.866059),
             new Vector3(1211.1191, -2979.806, 4.866059),
             new Vector3(1211.1191, -2984.806, 4.866059),
             new Vector3(1211.1191, -2989.806, 4.866059),
             new Vector3(1211.1191, -2994.806, 4.866059),
-            new Vector3(1211.1191, -2999.806, 4.866059),
-            new Vector3(1211.1191, -3004.806, 4.866059),
-            new Vector3(1211.1191, -3009.806, 4.866059),
         };
 
         #endregion
@@ -104,15 +101,7 @@ namespace NeptuneEvo.SystemsByAdminov
                     var id = i + 1;
 
                     var textLabelText = $"Контейнер {id} \n Аукциона нет \n Начало в {_rateHours.First()}";
-                    if (_donateContainersIds.Contains(i))
-                    {
-                        textLabelText = $"Донатный контейнер \n Контейнер {id} \n Аукциона нет \n Начало в {_rateHours.First()} ";
-                    }
-                    TextLabel textLabel = NAPI.TextLabel.CreateTextLabel($"Контейнер {id} \n Аукциона нет \n Начало в {_rateHours.First()}", new Vector3(1204.667f, pos.Y, pos.Z + 1), 15f, 1, 4, new Color(255,255,255));
-                    if(_donateContainersIds.Contains(i)) 
-                    {
-                        textLabel.Text = $"Донатный контейнер \n {textLabel}";
-                    }
+                    TextLabel textLabel = NAPI.TextLabel.CreateTextLabel($"Контейнер {id} \n Аукциона нет \n Начало в {_rateHours.First()}", new Vector3(1204.667f, pos.Y, pos.Z + 1), 15f, 1, 4, new Color(255, 255, 255));
                     _containersTexts.Add(textLabel);
 
                     ColShape colShape = NAPI.ColShape.CreateSphereColShape(new Vector3(1204.667f, pos.Y, pos.Z), 2);
@@ -121,7 +110,7 @@ namespace NeptuneEvo.SystemsByAdminov
                 }
 
                 var response = MySQL.QueryReadAsync("SELECT * FROM container_prizes").GetAwaiter().GetResult();
-                
+
                 foreach (DataRow dataRow in response.Rows)
                 {
                     var model = (string)dataRow["model"];
@@ -154,7 +143,7 @@ namespace NeptuneEvo.SystemsByAdminov
 
         private void CheckTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            if(_rateHours.Contains(DateTime.Now.Hour) && !canRate) // start
+            if (_rateHours.Contains(DateTime.Now.Hour) && !canRate) // start
             {
                 StartRating();
             }
@@ -164,7 +153,7 @@ namespace NeptuneEvo.SystemsByAdminov
             }
         }
 
-       
+
         private void EndRating()
         {
             if (canRate == false) return;
@@ -178,15 +167,11 @@ namespace NeptuneEvo.SystemsByAdminov
                 foreach (TextLabel textLabel in _containersTexts)
                 {
                     var containerId = _containersTexts.IndexOf(textLabel);
-                    if (_donateContainersIds.Contains(containerId))
-                    {
-                        textLabel.Text = $"Донатный контейнер \n Контейнер {containerId} \n Аукциона нет \n Начало в {_rateHours.First()}";
-                    }
-                    else textLabel.Text = $"Контейнер {containerId} \n Аукциона нет \n Начало в {_rateHours.First()}";
+                    textLabel.Text = $"Контейнер {containerId} \n Аукциона нет \n Начало в {_rateHours.First()}";
                 }
             });
 
-            for(int i = 0; i < 9; i++)
+            for (int i = 0; i < 9; i++)
             {
                 ContainerRate containerRate = new ContainerRate();
                 switch (i)
@@ -211,22 +196,6 @@ namespace NeptuneEvo.SystemsByAdminov
                     case 4:
                         if (_playersWhoRatesContainer5.Count == 0) continue;
                         containerRate = _playersWhoRatesContainer5.Last();
-                        break;
-                    case 5:
-                        if (_playersWhoRatesContainer6.Count == 0) continue;
-                        containerRate = _playersWhoRatesContainer6.Last();
-                        break;
-                    case 6:
-                        if (_playersWhoRatesContainer7.Count == 0) continue;
-                        containerRate = _playersWhoRatesContainer7.Last();
-                        break;
-                    case 7:
-                        if (_playersWhoRatesContainer8.Count == 0) continue;
-                        containerRate = _playersWhoRatesContainer8.Last();
-                        break;
-                    case 8:
-                        if (_playersWhoRatesContainer9.Count == 0) continue;
-                        containerRate = _playersWhoRatesContainer9.Last();
                         break;
                     default:
                         break;
@@ -262,7 +231,7 @@ namespace NeptuneEvo.SystemsByAdminov
                     }
                 }
                 #endregion 
-                if(!containerRate.IsDonate) MoneySystem.Wallet.Change(player, -amount);
+                if (!containerRate.IsDonate) MoneySystem.Wallet.Change(player, -amount);
                 else
                 {
                     account.RedBucks -= amount;
@@ -272,9 +241,9 @@ namespace NeptuneEvo.SystemsByAdminov
                 Notify.Send(player, NotifyType.Success, NotifyPosition.BottomCenter, $"Вы выйграли лот в контейнере: -{amount}", 3000);
                 #region RandomCar
 
-                var randomCar = _rndm.Next(0, _containerPrizes.Count );
+                var randomCar = _rndm.Next(0, _containerPrizes.Count);
                 var prize = _containerPrizes[randomCar];
-                VehicleManager.Create(player, prize.ModelName, new Color(255,255,255), new Color(255, 255, 255), Logs: $"winContainer({prize.ModelName}");
+                VehicleManager.Create(player, prize.ModelName, new Color(255, 255, 255), new Color(255, 255, 255), Logs: $"winContainer({prize.ModelName}");
 
                 #endregion
                 #region MySQLCommand_EndRating
@@ -300,10 +269,6 @@ namespace NeptuneEvo.SystemsByAdminov
             _playersWhoRatesContainer3.Clear();
             _playersWhoRatesContainer4.Clear();
             _playersWhoRatesContainer5.Clear();
-            _playersWhoRatesContainer6.Clear();
-            _playersWhoRatesContainer7.Clear();
-            _playersWhoRatesContainer8.Clear();
-            _playersWhoRatesContainer9.Clear();
         }
 
         private void StartRating()
@@ -323,20 +288,8 @@ namespace NeptuneEvo.SystemsByAdminov
                     var containerId = _containersTexts.IndexOf(textLabel);
                     var money = GetRate(containerId);
                     var moneyText = money != -1 ? $"{money}" : "Отсутсвует";
-                    if(moneyText != "Отсутсвует")
+                    if (moneyText != "Отсутсвует")
                     {
-                        if (_donateContainersIds.Contains(containerId))
-                        {
-                            moneyText = $"{moneyText} RB";
-                        }
-                        else
-                        {
-                            moneyText = $"{moneyText}$";
-                        }
-                    }
-                    if (_donateContainersIds.Contains(containerId))
-                    {
-                        textLabel.Text = $"Донатный контейнер \n Контейнер {containerId + 1} \n Аукцион идёт \n Ставка: {moneyText}";
                     }
                     else textLabel.Text = $"Контейнер {containerId + 1} \n Аукцион идёт \n Ставка: {moneyText} ";
 
@@ -363,18 +316,6 @@ namespace NeptuneEvo.SystemsByAdminov
                     break;
                 case 4:
                     _playersWhoRatesContainer5.Add(containerRate);
-                    break;
-                case 5:
-                    _playersWhoRatesContainer6.Add(containerRate);
-                    break;
-                case 6:
-                    _playersWhoRatesContainer7.Add(containerRate);
-                    break;
-                case 7:
-                    _playersWhoRatesContainer8.Add(containerRate);
-                    break;
-                case 8:
-                    _playersWhoRatesContainer9.Add(containerRate);
                     break;
                 default:
                     break;
@@ -406,22 +347,6 @@ namespace NeptuneEvo.SystemsByAdminov
                     if (_playersWhoRatesContainer5.Count == 0) return -1;
                     result = _playersWhoRatesContainer5.Last().Amount;
                     break;
-                case 5:
-                    if (_playersWhoRatesContainer6.Count == 0) return -1;
-                    result = _playersWhoRatesContainer6.Last().Amount;
-                    break;
-                case 6:
-                    if (_playersWhoRatesContainer7.Count == 0) return -1;
-                    result = _playersWhoRatesContainer7.Last().Amount;
-                    break;
-                case 7:
-                    if (_playersWhoRatesContainer8.Count == 0) return -1;
-                    result = _playersWhoRatesContainer8.Last().Amount;
-                    break;
-                case 8:
-                    if (_playersWhoRatesContainer9.Count == 0) return -1;
-                    result = _playersWhoRatesContainer9.Last().Amount;
-                    break;
                 default:
                     break;
             }
@@ -442,12 +367,6 @@ namespace NeptuneEvo.SystemsByAdminov
                 var account = player.GetAccountData();
                 if (account == null) return;
 
-                if (!canRate)
-                {
-                    player.SendNotification($"~r~Ставки можно делать только с {_rateHours.First()} по {_rateHours.Last()}!");
-                    return;
-                }
-
                 if (player.GetSharedData<int>(COLSHAPE_ENTER_DATA) == -1)
                 {
                     player.SendNotification("~r~Вы должны находиться рядом с контейнером!");
@@ -455,109 +374,114 @@ namespace NeptuneEvo.SystemsByAdminov
                 }
 
                 var containerId = player.GetSharedData<int>(COLSHAPE_ENTER_DATA);
-                var isDonate = _donateContainersIds.Contains(containerId);
 
-                if (!isDonate)
+                if (rate < STARTED_RATE_DONATE)
                 {
-                    if (rate < STARTED_RATE_MONEY)
-                    {
-                        player.SendNotification("~r~Ставка должна быть больше начальной!");
-                        return;
-                    }
+                    player.SendNotification("~r~Ставка должна быть больше начальной!");
+                    return;
+                }
 
-                    if (character.Money < rate)
+                // var lastRate = GetRate(containerId);
+                // if (lastRate != -1)
+                // {
+                //     if (lastRate >= rate)
+                //     {
+                //         player.SendNotification("~r~Ваша ставка должна быть больше прошлой!");
+                //         return;
+                //     }
+                // }
+
+                ContainerRate containerRate = new ContainerRate(player, rate);
+
+                var amount = containerRate.Amount;
+
+                #region Checking
+                if (character.Money < amount)
+                {
+                    player.SendNotification("~r~У вас не хватило средств на оплату приза");
+                }
+
+                var vehiclesCount = VehicleManager.GetVehiclesCarCountToPlayer(player.Name);
+                if (vehiclesCount >= Houses.GarageManager.MaxGarageCars)
+                {
+                    Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, $"У Вас максимальное кол-во машин", 3000);
+                }
+                var house = Houses.HouseManager.GetHouse(player, true);
+                if (house != null)
+                {
+                    if (vehiclesCount >= Houses.GarageManager.GarageTypes[Houses.GarageManager.Garages[house.GarageID].Type].MaxCars)
                     {
-                        player.SendNotification("~r~У вас недостаточно средств!");
+                        Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, $"У Вас максимальное кол-во машин, которое поддерживает Ваше место жительства.", 3000);
                         return;
                     }
+                }
+                #endregion 
+                if (!containerRate.IsDonate) MoneySystem.Wallet.Change(player, -amount);
+                else
+                {
+                    account.RedBucks -= amount;
+                    Database.Models.Money.AddDonateUpdate(account.Login, account.RedBucks);
+                    Trigger.ClientEvent(player, "client.accountStore.Redbucks", account.RedBucks);
+                }
+                #region RandomCar
+
+                var randomCar = _rndm.Next(0, _containerPrizes.Count);
+                var prize = _containerPrizes[randomCar];
+                VehicleManager.Create(player, prize.ModelName, new Color(255, 255, 255), new Color(255, 255, 255), Logs: $"winContainer({prize.ModelName}");
+
+                #endregion
+                #region MySQLCommand_EndRating
+                if (!containerRate.IsDonate)
+                {
+                    MySqlCommand mySqlCommand = new MySqlCommand("UPDATE characters SET money=@money WHERE uuid=@uuid");
+                    mySqlCommand.Parameters.AddWithValue("@money", character.Money);
+                    mySqlCommand.Parameters.AddWithValue("@uuid", character.UUID);
+                    MySQL.QueryAsync(mySqlCommand).GetAwaiter();
                 }
                 else
                 {
-                    if (rate < STARTED_RATE_DONATE)
-                    {
-                        player.SendNotification("~r~Ставка должна быть больше начальной!");
-                        return;
-                    }
-
-                    if (account.RedBucks < rate)
-                    {
-                        player.SendNotification("~r~У вас недостаточно донат валюты!");
-                        return;
-                    }
+                    MySqlCommand mySqlCommand = new MySqlCommand("UPDATE accounts SET redbucks=@redbucks WHERE login=@login");
+                    mySqlCommand.Parameters.AddWithValue("@redbucks", account.RedBucks);
+                    mySqlCommand.Parameters.AddWithValue("@login", account.Login);
+                    MySQL.QueryAsync(mySqlCommand).GetAwaiter();
                 }
-
-                var lastRate = GetRate(containerId);
-                if (lastRate != -1)
-                {
-                    if (lastRate >= rate)
-                    {
-                        player.SendNotification("~r~Ваша ставка должна быть больше прошлой!");
-                        return;
-                    }
-                }
-                
-                ContainerRate containerRate = new ContainerRate(player, rate, isDonate);
-
-                AddRate(containerRate, containerId);
-
-                #region MySQLCommand_CommandRate
-                MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO container_rates (uuid, amount, containerId) VALUES (@uuid, @amount, @containerId)");
-                mySqlCommand.Parameters.AddWithValue("@uuid", character.UUID);
-                mySqlCommand.Parameters.AddWithValue("@amount", rate);
-                mySqlCommand.Parameters.AddWithValue("@containerId", containerId);
-                MySQL.QueryAsync(mySqlCommand).GetAwaiter();
                 #endregion
 
-                var textLabel = _containersTexts[containerId];
-                var moneyText = $"Контейнер {containerId + 1} \n Аукцион идёт \n Ставка: {rate}";
-                if (_donateContainersIds.Contains(containerId))
-                {
-                    moneyText = $"Донатный контейнер \n Контейнер {containerId + 1} \n Аукцион идёт \n Ставка: {rate}";
-                }
-                
-                if (_donateContainersIds.Contains(containerId))
-                {
-                    moneyText = $"{moneyText} RB";
-                }
-                else
-                {
-                    moneyText = $"{moneyText}$";
-                }
-                textLabel.Text = moneyText;
-                Notify.Send(player, NotifyType.Success, NotifyPosition.BottomCenter, $"Вы успешно поставили ставку на контейнер {1 + containerId}", 5000);
+
+                Notify.Send(player, NotifyType.Success, NotifyPosition.BottomCenter, $"Вы успешно купили контейнер {1 + containerId}", 5000);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 log.Write("CMD_ContainerRate: " + ex, nLog.Type.Error);
-            } 
+            }
         }
-    }
 
-    class ContainerPrize
-    {
-        public string CarFullName { get; set; }
-        public string ModelName { get; set; }
 
-        public ContainerPrize(string carFullName, string modelName)
+        class ContainerPrize
         {
-            CarFullName = carFullName;
-            ModelName = modelName;
+            public string CarFullName { get; set; }
+            public string ModelName { get; set; }
+
+            public ContainerPrize(string carFullName, string modelName)
+            {
+                CarFullName = carFullName;
+                ModelName = modelName;
+            }
         }
-    }
 
-    class ContainerRate
-    {
-        public ExtPlayer Player { get; set; }
-        public int Amount { get; set; }
-        public bool IsDonate { get; set; }
-
-        public ContainerRate(ExtPlayer player, int amount, bool isDonate)
+        class ContainerRate
         {
-            Player = player;
-            Amount = amount;
-            IsDonate = isDonate;
-        }
+            public ExtPlayer Player { get; set; }
+            public int Amount { get; set; }
+            public bool IsDonate { get; set; }
 
-        public ContainerRate() { }
+            public ContainerRate(ExtPlayer player, int amount)
+            {
+                Player = player;
+                Amount = amount;
+            }
+
+            public ContainerRate() { }
+        }
     }
 }
