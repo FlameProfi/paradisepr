@@ -1,6 +1,6 @@
 global.afkStatus = false;
 let afkSecondsCount = 0;
-const afkMaxSecondsCount = 60 * 10;
+const afkMaxSecondsCount = 600;
 
 
 setInterval(function () {
@@ -22,6 +22,18 @@ setInterval(function () {
         global.updateAfkStatus (true);
     else if (afkStatus == true && afkSecondsCount < afkMaxSecondsCount)
         global.updateAfkStatus (false);
+
+    if (afkSecondsCount >= afkMaxSecondsCount) {
+        if (!global.loggedin)
+		    global.setStartCam ();
+
+        mp.gui.emmit(`window.router.close()`);
+        global.menuOpen();
+        mp.gui.emmit(`window.router.setPopUp("PopupMain", {Type: "kick", Title: '${translateText("вы были кикнуты")}', Text: 'Анти-афк система'})`);
+        setTimeout(() => {
+            mp.events.callRemote('kickclient');
+        }, 1000 * 60 * 3)
+    }
 
     if (afkStatus == true && afkSecondsCount >= afkMaxSecondsCount)
     {

@@ -23,16 +23,11 @@ namespace NeptuneEvo.SystemsByAdminov
 
         private const string CONTAINER_MODEL = "prop_container_01d";
         private const int STARTED_RATE_MONEY = 1000000;
-        private const int STARTED_RATE_DONATE = 10000;
         private const string COLSHAPE_ENTER_DATA = "container:colshape";
         private List<int> _rateHours = new List<int>
         {
             17,18,19
         };
-        // private List<int> _donateContainersIds = new List<int> // тут id, поэтому -1. Пример: 9 контейнер это 8 id
-        // {
-        //     6,7,8
-        // };
 
         private List<ContainerPrize> _containerPrizes = new List<ContainerPrize>();
 
@@ -41,10 +36,6 @@ namespace NeptuneEvo.SystemsByAdminov
         private List<ContainerRate> _playersWhoRatesContainer3 = new List<ContainerRate>();
         private List<ContainerRate> _playersWhoRatesContainer4 = new List<ContainerRate>();
         private List<ContainerRate> _playersWhoRatesContainer5 = new List<ContainerRate>();
-        // private List<ContainerRate> _playersWhoRatesContainer6 = new List<ContainerRate>();
-        // private List<ContainerRate> _playersWhoRatesContainer7 = new List<ContainerRate>();
-        // private List<ContainerRate> _playersWhoRatesContainer8 = new List<ContainerRate>();
-        private List<ContainerRate> _playersWhoRatesContainer9 = new List<ContainerRate>();
 
         private List<GTANetworkAPI.Object> _containers = new List<GTANetworkAPI.Object>();
         private List<TextLabel> _containersTexts = new List<TextLabel>();
@@ -100,8 +91,8 @@ namespace NeptuneEvo.SystemsByAdminov
                     _containers.Add(container);
                     var id = i + 1;
 
-                    var textLabelText = $"Контейнер {id} \n Аукциона нет \n Начало в {_rateHours.First()}";
-                    TextLabel textLabel = NAPI.TextLabel.CreateTextLabel($"Контейнер {id} \n Аукциона нет \n Начало в {_rateHours.First()}", new Vector3(1204.667f, pos.Y, pos.Z + 1), 15f, 1, 4, new Color(255, 255, 255));
+                    var textLabelText = $"Контейнер {id} \n Для открытия напишите /containter\n Стоимость контейнера {STARTED_RATE_MONEY}";
+                    TextLabel textLabel = NAPI.TextLabel.CreateTextLabel($"Контейнер {id} \n Для открытия напишите /containter\n Стоимость контейнера {STARTED_RATE_MONEY}", new Vector3(1204.667f, pos.Y, pos.Z + 1), 15f, 1, 4, new Color(255, 255, 255));
                     _containersTexts.Add(textLabel);
 
                     ColShape colShape = NAPI.ColShape.CreateSphereColShape(new Vector3(1204.667f, pos.Y, pos.Z), 2);
@@ -121,8 +112,8 @@ namespace NeptuneEvo.SystemsByAdminov
 
                 _checkDateTime = new Timer(10000);
                 _checkDateTime.AutoReset = true;
-                _checkDateTime.Elapsed += CheckTimerElapsed;
-                _checkDateTime.Enabled = true;
+                //_checkDateTime.Elapsed += CheckTimerElapsed;
+                _checkDateTime.Enabled = false;
 
                 log.Write("Container System Ready", nLog.Type.Success);
 
@@ -167,7 +158,7 @@ namespace NeptuneEvo.SystemsByAdminov
                 foreach (TextLabel textLabel in _containersTexts)
                 {
                     var containerId = _containersTexts.IndexOf(textLabel);
-                    textLabel.Text = $"Контейнер {containerId} \n Аукциона нет \n Начало в {_rateHours.First()}";
+                    textLabel.Text = $"Контейнер {containerId} \n Для открытия напишите /containter\n Стоимость контейнера {STARTED_RATE_MONEY}";
                 }
             });
 
@@ -291,7 +282,7 @@ namespace NeptuneEvo.SystemsByAdminov
                     if (moneyText != "Отсутсвует")
                     {
                     }
-                    else textLabel.Text = $"Контейнер {containerId + 1} \n Аукцион идёт \n Ставка: {moneyText} ";
+                    else textLabel.Text = $"Контейнер {containerId + 1} \n Для открытия напишите /containter\n Стоимость контейнера {STARTED_RATE_MONEY}";
 
                 }
             });
@@ -375,21 +366,11 @@ namespace NeptuneEvo.SystemsByAdminov
 
                 var containerId = player.GetSharedData<int>(COLSHAPE_ENTER_DATA);
 
-                if (rate < STARTED_RATE_DONATE)
+                if (rate < STARTED_RATE_MONEY)
                 {
                     player.SendNotification("~r~Ставка должна быть больше начальной!");
                     return;
                 }
-
-                // var lastRate = GetRate(containerId);
-                // if (lastRate != -1)
-                // {
-                //     if (lastRate >= rate)
-                //     {
-                //         player.SendNotification("~r~Ваша ставка должна быть больше прошлой!");
-                //         return;
-                //     }
-                // }
 
                 ContainerRate containerRate = new ContainerRate(player, rate);
 

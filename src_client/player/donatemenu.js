@@ -152,7 +152,7 @@ let donateBrowsers = null;
 // gm.events.add('client.opendonatesite', (url) => {
 //     try
 //     {
-//         if (!url.toString().includes("https://revolution-rp.ru/gogaidinaxuy/")) return;
+//         if (!url.toString().includes("https://paradiserp.ru/gogaidinaxuy/")) return;
 //         donateBrowsers = mp.browsers.new(url);
 //         mp.gui.cursor.show(true, true);
 //     }

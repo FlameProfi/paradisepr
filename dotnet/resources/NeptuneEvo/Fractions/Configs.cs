@@ -793,7 +793,7 @@ namespace NeptuneEvo.Fractions
                         WeaponRepository.FractionsLastSerial[fractionId] = Convert.ToInt32(dataRow["lastserial"]);
 
                         //if (fractionId == 16 || fractionId == 17) continue; залупа нахуй вырезано
-                        if (fractionId == 16) continue;
+                        //if (fractionId == 16) continue;
 
                         #region label Creating
                         if (Stocks.matsCoords.ContainsKey(fractionId))

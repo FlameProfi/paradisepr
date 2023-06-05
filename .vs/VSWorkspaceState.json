@@ -4,8 +4,13 @@
     "\\dotnet",
     "\\dotnet\\resources",
     "\\dotnet\\resources\\NeptuneEvo",
-    "\\dotnet\\resources\\NeptuneEvo\\Core\\FakeCars"
+    "\\dotnet\\resources\\NeptuneEvo\\Core",
+    "\\dotnet\\resources\\NeptuneEvo\\Events",
+    "\\dotnet\\resources\\NeptuneEvo\\Houses",
+    "\\dotnet\\resources\\NeptuneEvo\\Houses\\Rieltagency",
+    "\\dotnet\\resources\\NeptuneEvo\\Jobs",
+    "\\dotnet\\resources\\NeptuneEvo\\Organizations"
   ],
-  "SelectedNode": "\\dotnet\\resources\\NeptuneEvo\\Fractions",
+  "SelectedNode": "\\dotnet\\resources\\NeptuneEvo\\Fractions\\Manager.cs",
   "PreviewInSolutionExplorer": false
 }

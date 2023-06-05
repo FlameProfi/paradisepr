@@ -565,22 +565,22 @@ namespace NeptuneEvo.Fractions
         
         private static IReadOnlyList<GarageData> GaragesData = new List<GarageData>()
         {
-            new GarageData((int) Models.Fractions.CITY,
+            /*new GarageData((int) Models.Fractions.CITY,
                 new Vector3(-578.48773, -128.10455, 34.46491f), new Vector3(), 
                 StaticExitGaragesData[1][0][2], StaticExitGaragesData[1][1][2],
                 new Vector3(-578.48773, -128.10455, 34.46491f),
                 new Vector3(-578.48773, -128.10455, 34.46491f), new Vector3(0f, 0f, 128.5f), 
                 StaticExitGaragesData[1][0][1], 
-                StaticExitGaragesData[1][0][0], StaticExitGaragesData[1][1][0]),
-            new GarageData((int) Models.Fractions.POLICE,
-                new Vector3(461.55856, -1019.4882, 27.7897), new Vector3(), 
-                StaticExitGaragesData[1][0][2], StaticExitGaragesData[1][1][2], 
+                StaticExitGaragesData[1][0][0], StaticExitGaragesData[1][1][0]),*/
+            //new GarageData((int) Models.Fractions.POLICE,
+              //  new Vector3(461.55856, -1019.4882, 27.7897), new Vector3(), 
+                //StaticExitGaragesData[1][0][2], StaticExitGaragesData[1][1][2], 
                 
-                new Vector3(461.55856, -1019.4882, 27.7897), 
-                new Vector3(463.19778, -1014.53796, 27.772268), new Vector3(0.067829154, 0.3221672, 89.33315), 
-                StaticExitGaragesData[1][0][1], 
-                StaticExitGaragesData[1][0][0], StaticExitGaragesData[1][1][0]),
-            new GarageData((int) Models.Fractions.EMS,
+               //new Vector3(461.55856, -1019.4882, 27.7897), 
+                //new Vector3(463.19778, -1014.53796, 27.772268), new Vector3(0.067829154, 0.3221672, 89.33315), 
+                //StaticExitGaragesData[1][0][1], 
+                //StaticExitGaragesData[1][0][0], StaticExitGaragesData[1][1][0]),
+           /* new GarageData((int) Models.Fractions.EMS,
                 new Vector3(338.57315, -561.15015, 28.44394), new Vector3(), 
                 StaticExitGaragesData[0][0][2], StaticExitGaragesData[0][1][2], 
                 
@@ -612,7 +612,7 @@ namespace NeptuneEvo.Fractions
                 new Vector3(1860.5508, 3707.3257, 32.929916), new Vector3(1.2823077, -1.3675255, -148.68239), 
                 StaticExitGaragesData[0][0][1], 
                 StaticExitGaragesData[0][0][0], StaticExitGaragesData[0][1][0],
-                DefaultDimension: 1850),
+                DefaultDimension: 1850),*/
         };
 
         private static void CreateGarageData()
@@ -1414,8 +1414,8 @@ namespace NeptuneEvo.Fractions
                         ListItems = new List<int>() { 29, 30, 31 };
                         break;
                     case "biker":
-                        title = "Выдача оружия";
-                        titleIcon = "sm-icon-logo-fib";
+                        title = "Выдача миссии";
+                        titleIcon = "sm-icon-mafia";
                         ListItems = new List<int>() { 29, 30, 31 };
                         break;
                     default:
@@ -2295,7 +2295,7 @@ namespace NeptuneEvo.Fractions
             { (int) Models.Fractions.ARMENIAN, new Vector3(-1793.937, 421.4769, 125.6)},
             { (int) Models.Fractions.ARMY, new Vector3()},
             { (int) Models.Fractions.LSNEWS, new Vector3()},
-            { (int) Models.Fractions.THELOST, new Vector3(976.768738, -103.651985, 73.725174)},
+            { (int) Models.Fractions.THELOST, new Vector3(976.6812, -103.5077, 74.8451)}, 
             { (int) Models.Fractions.PRISON, new Vector3()},
             { (int) Models.Fractions.SHERIFF, new Vector3()},
         };
@@ -2314,9 +2314,9 @@ namespace NeptuneEvo.Fractions
             { (int) Models.Fractions.RUSSIAN, new Vector3(-128.7453, 1006.892, 234.6121)},
             { (int) Models.Fractions.YAKUZA, new Vector3(-1460.2235, -53.754063, 54.45319 - 1.12)},
             { (int) Models.Fractions.ARMENIAN, new Vector3(-1714.7026, 483.68045, 127.67392)},
-            { (int) Models.Fractions.ARMY, new Vector3(-530.29456, -2875.31, 5.1817595)},
-            { (int) Models.Fractions.LSNEWS, new Vector3()},
-            { (int) Models.Fractions.THELOST, new Vector3(977.1458, -132.7649, 72.84191)},
+            { (int) Models.Fractions.ARMY, new Vector3(-1928.0631, 3126.5298, 32.810303)},
+            { (int) Models.Fractions.LSNEWS, new Vector3(-1140.1532, -357.90558, 37.673637)},
+            { (int) Models.Fractions.THELOST, new Vector3(953.335, -106.92492, 74.353065)},
             { (int) Models.Fractions.PRISON, new Vector3(1754.1077, 2622.5627, 44.56497)},
             { (int) Models.Fractions.SHERIFF, new Vector3(-463.26593, 6009.509, 30f)},
         };
@@ -2345,8 +2345,6 @@ namespace NeptuneEvo.Fractions
                 case (int) Models.Fractions.YAKUZA:
                 case (int) Models.Fractions.ARMENIAN:
                 case (int) Models.Fractions.THELOST:
-                    amount = 180000;
-                    break;
                 case (int) Models.Fractions.CITY:
                     amount = 100000;
                     break;

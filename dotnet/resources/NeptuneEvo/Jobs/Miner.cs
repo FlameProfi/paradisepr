@@ -66,10 +66,10 @@ namespace NeptuneEvo.Jobs
             {
                 
                 Main.CreateBlip(new Main.BlipData(527, "Гражданская шахта", new Vector3(124.831116, -397.94046, 41.263977), 4, true));
-                //Main.CreateBlip(new Main.BlipData(527, "Государственная шахта", new Vector3(-596, 2089, 131), 4, true));
+                Main.CreateBlip(new Main.BlipData(527, "Государственная шахта", new Vector3(-596, 2089, 131), 4, true));
                // Main.CreateBlip(new Main.BlipData(566, "Автомастерская самообслуживания", new Vector3(501.32233, -1336.5303, 29.32083), 4, true));
                 //Main.CreateBlip(new Main.BlipData(648, "Металлургический завод", new Vector3(1100.942, -2008.321, 47.42521), 4, true));
-               // Main.CreateBlip(new Main.BlipData(618, "Скупщик драгоценностей", new Vector3(1054.20, -1952.84, 32.09), 70, true));
+                Main.CreateBlip(new Main.BlipData(618, "Скупщик драгоценностей", new Vector3(-1637.993, -800.12006, 10.246064), 70, true));
 
                 UpdateOres();
 

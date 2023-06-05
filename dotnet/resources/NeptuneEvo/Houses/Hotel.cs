@@ -35,9 +35,9 @@ namespace NeptuneEvo.Houses
             new Vector3(-889.4531, -2180.477, 7.47327),
             new Vector3(407.5778, -1100.066, 28.28551),
         };
-        private static Vector3 InteriorDoor = new Vector3(151.2052, -1008.007, -100.12);
+        private static Vector3 InteriorDoor = new Vector3(-779.10583, 338.46817, 196.69873);
 
-        //[ServerEvent(Event.ResourceStart)]
+        [ServerEvent(Event.ResourceStart)]
         public void Event_ResourceStart()
         {
             try
@@ -45,11 +45,11 @@ namespace NeptuneEvo.Houses
                 int HotelID = 0;
                 foreach (Vector3 pos in HotelEnters)
                 {
-                    /*Blip blip = (ExtBlip) NAPI.Blip.CreateBlip(pos);
+                    Blip blip = (ExtBlip) NAPI.Blip.CreateBlip(pos);
                     blip.ShortRange = true;
                     blip.Sprite = 475;
                     blip.Color = 59;
-                    blip.Name = "Hotel";*/
+                    blip.Name = "Hotel";
 
                     Main.CreateBlip(new Main.BlipData(475, LangFunc.GetText(LangType.Ru, DataName.Hotel), pos, 16, true));
 

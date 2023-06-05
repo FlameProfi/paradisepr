@@ -120,6 +120,7 @@ namespace NeptuneEvo.Fractions
             // { (int) Models.Fractions.YAKUZA, new Vector3(-1454.1617, -56.422596, 52.7) },
             { (int) Models.Fractions.YAKUZA, new Vector3(-1450.6471, -54.422596, 52.55) },
             { (int) Models.Fractions.ARMENIAN, new Vector3(-1795.539, 399.2474, 112.8691) },
+            { (int) Models.Fractions.THELOST, new Vector3(980.2203, -118.9507, 74.07727) },
         };
         private static Dictionary<int, Vector3> MafiaStartDeliveryRot = new Dictionary<int, Vector3>()
         {
@@ -127,14 +128,6 @@ namespace NeptuneEvo.Fractions
             { (int) Models.Fractions.RUSSIAN, new Vector3(-0.02024388, 0.4382547, 198.8489) },
             { (int) Models.Fractions.YAKUZA, new Vector3(0.0, 0.0, 177.61) },
             { (int) Models.Fractions.ARMENIAN, new Vector3(-0.3686997, -0.2600957, 286.0435) },
-        };
-
-        public static Dictionary<int, Vector3> BikerStartDelivery = new Dictionary<int, Vector3>()
-        {
-            { (int) Models.Fractions.THELOST, new Vector3(980.2203, -118.9507, 74.07727) },
-        };
-        private static Dictionary<int, Vector3> BikerStartDeliveryRot = new Dictionary<int, Vector3>()
-        {
             { (int) Models.Fractions.THELOST, new Vector3(-1.311226, -2.088267, 148.5165) },
         };
 
@@ -190,14 +183,14 @@ namespace NeptuneEvo.Fractions
                 #endregion
 
                 #region BikerStartDelivery
-                //i = 0;
-                //foreach (KeyValuePair<int, Vector3> pos in BikerStartDelivery)
-                //{
-                //    CustomColShape.CreateCylinderColShape(pos.Value, 3, 3, NAPI.GlobalDimension, ColShapeEnums.CrimeBiker, pos.Key);
-                //
-                //    NAPI.Marker.CreateMarker(1, pos.Value - new Vector3(0, 0, 2.7), new Vector3(), new Vector3(), 3, new Color(255, 0, 0, 220), false, NAPI.GlobalDimension);
-                //    NAPI.TextLabel.CreateTextLabel("~w~Взять миссию по доставке", pos.Value, 5f, 0.4f, 0, new Color(255, 255, 255));
-                //}
+                i = 0;
+                foreach (KeyValuePair<int, Vector3> pos in MafiaStartDelivery)
+                {
+                    CustomColShape.CreateCylinderColShape(pos.Value, 3, 3, NAPI.GlobalDimension, ColShapeEnums.CrimeBiker, pos.Key);
+                
+                    NAPI.Marker.CreateMarker(1, pos.Value - new Vector3(0, 0, 2.7), new Vector3(), new Vector3(), 3, new Color(255, 0, 0, 220), false, NAPI.GlobalDimension);
+                    NAPI.TextLabel.CreateTextLabel("~w~Взять миссию по доставке", pos.Value, 5f, 0.4f, 0, new Color(255, 255, 255));
+                }
                 #endregion
 
                 #region PoliceDropDelivery
