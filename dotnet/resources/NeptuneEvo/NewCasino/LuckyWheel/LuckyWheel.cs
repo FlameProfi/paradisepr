@@ -11,7 +11,7 @@ namespace NeptuneEvo.NewCasino
         /// <summary>
         /// Состояние колеса (вращается / не вращается)
         /// </summary>
-        private static bool IsRolling = true;
+        private static bool IsRolling = false;
 
         private static List<object> LastDrops = new List<object>();
 

@@ -28,7 +28,7 @@ namespace NeptuneEvo.Chars
                 //
                 Main.CreateBlip(new Main.BlipData(478, "Хранилище 'GoPostal'", new Vector3(132.80247, 96.28752, 83.50746), 32, true));
                 Main.CreateBlip(new Main.BlipData(525, "Центр занятости", new Vector3(436.5074, -627.4617, 28.707539), 0, true));
-                //NAPI.Marker.CreateMarker(1, new Vector3(-545.02136, -204.28348, 38.2) - new Vector3(0, 0, 1.5), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220));
+                NAPI.Marker.CreateMarker(1, new Vector3(130.86491, 89.83432, 82.21118) - new Vector3(0, 0, 1.5), new Vector3(), new Vector3(), 1f, new Color(255, 255, 255, 220));
                 //CustomColShape.CreateCylinderColShape(new Vector3(132.9969, 96.3529, 83.5076), 1f, 2, 0, ColShapeEnums.WarehouseEnter);
                 CustomColShape.CreateCylinderColShape(new Vector3(1048.2255, -3097.1624, -38.9999), 1f, 2, 5, ColShapeEnums.WarehouseExit);
                 PedSystem.Repository.CreateQuest("s_m_m_postal_01", new Vector3(132.80247, 96.28752, 83.50746), 160.59474f, 0, title: "~y~NPC~w~ Почтальон Александр\nСклад посылок", colShapeEnums: ColShapeEnums.Warehouse);

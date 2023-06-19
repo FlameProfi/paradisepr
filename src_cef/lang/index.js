@@ -1,4 +1,4 @@
-const url = "https://revolution-rp.ru/redagecdn/lang";
+const url = "https://paradiserp.ru/gogaidinaxuy/lang";
 
 /*
 import { writable } from "svelte/store";

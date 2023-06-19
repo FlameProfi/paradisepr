@@ -149,32 +149,32 @@ gm.events.add('client.roullete.updateWin', (_title, _name, _image, _desc) => {
 
 let donateBrowsers = null;
 
-gm.events.add('client.opendonatesite', (url) => {
-    try
-    {
-        if (!url.toString().includes("https://revolution-rp.ru/redagecdn/")) return;
-        donateBrowsers = mp.browsers.new(url);
-        mp.gui.cursor.show(true, true);
-    }
-    catch (e) 
-    {
-        mp.events.callRemote("client_trycatch", "player/donatemenu", "client.opendonatesite", e.toString());
-    }
-});
+// gm.events.add('client.opendonatesite', (url) => {
+//     try
+//     {
+//         if (!url.toString().includes("https://paradiserp.ru/gogaidinaxuy/")) return;
+//         donateBrowsers = mp.browsers.new(url);
+//         mp.gui.cursor.show(true, true);
+//     }
+//     catch (e) 
+//     {
+//         mp.events.callRemote("client_trycatch", "player/donatemenu", "client.opendonatesite", e.toString());
+//     }
+// });
 
-gm.events.add('client.closedonatesite', () => {
-    try
-    {
-        if (!donateBrowsers)
-            return;
-        donateBrowsers.destroy();
-        donateBrowsers = null;
-    }
-    catch (e) 
-    {
-        mp.events.callRemote("client_trycatch", "player/donatemenu", "client.closedonatesite", e.toString());
-    }
-});
+// gm.events.add('client.closedonatesite', () => {
+//     try
+//     {
+//         if (!donateBrowsers)
+//             return;
+//         donateBrowsers.destroy();
+//         donateBrowsers = null;
+//     }
+//     catch (e) 
+//     {
+//         mp.events.callRemote("client_trycatch", "player/donatemenu", "client.closedonatesite", e.toString());
+//     }
+// });
 
 //
 

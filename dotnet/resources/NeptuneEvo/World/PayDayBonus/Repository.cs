@@ -81,7 +81,7 @@ namespace NeptuneEvo.World.PayDayBonus
                         return;
                 
                     UpdateData.RedBucks(foreachPlayer, Main.DonateSettings.HappyHoursRB, msg: "СЧАСТЛИВЫЕ ЧАСЫ");
-                    Trigger.ClientEvent(foreachPlayer, "hud.info", "Удача на твоей стороне!", $"Поздравляем с победой в розыгрыше! {Main.DonateSettings.HappyHoursRB} RedBucks уже зачислены на твой аккаунт.", "СЧАСТЛИВЫЕ ЧАСЫ", "https://revolution-rp.ru/redagecdn/cloud/img/time.png");
+                    Trigger.ClientEvent(foreachPlayer, "hud.info", "Удача на твоей стороне!", $"Поздравляем с победой в розыгрыше! {Main.DonateSettings.HappyHoursRB} RedBucks уже зачислены на твой аккаунт.", "СЧАСТЛИВЫЕ ЧАСЫ", "https://paradiserp.ru/gogaidinaxuy/cloud/img/time.png");
 
                     winersName += $" {foreachSessionData.Name}";
                 }

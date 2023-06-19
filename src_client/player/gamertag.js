@@ -346,7 +346,7 @@ gm.events.add(global.renderName ["2s"], () => {
 	});
 });
 
-const DrawPlayerName = (player, x, y) => {
+const DrawPlayerName = (player, x, y, uuid) => {
 	try {
 		const textData = {};
 		textData.font = 0; 
