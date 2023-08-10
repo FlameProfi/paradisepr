@@ -1,7 +1,7 @@
-﻿using GTANetworkAPI;
+using GTANetworkAPI;
 using NeptuneEvo.Handles;
 using NeptuneEvo.Players;
-using Redage.SDK;
+using Izumrud.SDK;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,13 +25,13 @@ namespace NeptuneEvo.Accounts.Recovery
                 return;
             }
             sessionData.TimingsData.NextRestorePass = DateTime.Now.AddSeconds(1);
-            Trigger.SetTask(() =>
+            Trigger.SetTask(async () =>
             {
-                if (state == 0) 
-                    Repository.SendEmail(player, loginOrCode);
-                else 
+                if (state == 0)
+                    await Repository.SendEmailAsync(player, loginOrCode);
+                else
                     Repository.RecoveryPassword(player, loginOrCode);
             });
         }
     }
-}
+} 
